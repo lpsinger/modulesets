@@ -18,7 +18,7 @@ moduleset = [ 'lsc' ]
 
 #
 # A list of the modules to build.  Defaults to the GNOME core and tested apps.
-# modules = [ 'lalsuite' ]
+modules = [ 'lalsuite', 'gstlal-all' ]
 
 # what directory should the source be checked out to? ~/src
 checkoutroot = '~/src'
