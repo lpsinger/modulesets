@@ -1,0 +1,61 @@
+# -*- mode: python -*-
+# -*- coding: utf-8 -*-
+
+import sys
+
+# edit this file to match your settings and copy or symlink it to ~/.config/jhbuildrc
+
+# whether to use a local copy of modulesets (instead of fetching them from svn)
+use_local_modulesets = True
+
+# module directory
+modulesets_dir = '~/modulesets'
+
+# what module set should be used.  The default can be found in
+# jhbuild/defaults.jhbuildrc, but can be any file in the modulesets directory
+# or a URL of a module set file on a web server.
+moduleset = [ 'lsc' ]
+
+#
+# A list of the modules to build.  Defaults to the GNOME core and tested apps.
+# modules = [ 'lalsuite' ]
+
+# what directory should the source be checked out to? ~/src
+checkoutroot = '~/src'
+
+# in what directory should out-of-srcdir builds be performed?
+# Try, in the following order:
+#   /usr1/$USER/build
+#   /local/$USER/build
+#	/var/tmp/$USER/build
+buildroot = '/usr1/%s' % os.getlogin()
+if not os.path.isdir(buildroot):
+	buildroot = '/local/user/%s' % os.getlogin()
+if not os.path.isdir(buildroot):
+	buildroot = '/var/tmp/%s' % os.getlogin()
+buildroot = os.path.join(buildroot, 'build')
+
+# pretty prompt to tell user when they are in the JHBuild shell
+os.environ['PS1'] = '\[\033[1;34m\]JHBuild\033[1;32m\]:\h:\W \u $ \[\033[0m\] '
+
+# the prefix to configure/install modules to (must have write access)
+prefix = '~/local'
+
+# custom CFLAGS / environment pieces for the build
+# os.environ['CFLAGS'] = '-Wall -g -O0'
+
+# on Mac OS under MacPorts, pkg-config files for some Python packages are in
+# this location.
+if sys.platform == 'darwin':
+	addpath('PKG_CONFIG_PATH', '/opt/local/Library/Frameworks/Python.framework/Versions/Current/lib/pkgconfig')
+
+# extra arguments to pass to all autogen.sh scripts
+# to speed up builds of GNOME, try '--disable-static --disable-gtk-doc'
+#autogenargs=''
+
+# A string listing additional arguments to be passed to make.
+# Set makeargs to 'V=1' for verbose build output.
+#makeargs = ''
+
+# Uncomment to use git-svn instead of svn.
+# svn_program = 'git-svn'
