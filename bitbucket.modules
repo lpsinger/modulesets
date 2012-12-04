@@ -1,0 +1,22 @@
+<?xml version="1.0"?><!--*- mode: nxml; indent-tabs-mode: nil -*-->
+<!DOCTYPE moduleset SYSTEM "moduleset.dtd">
+<?xml-stylesheet type="text/xsl" href="moduleset.xsl"?>
+<!-- vim:set ts=2 expandtab: -->
+<moduleset>
+  <repository type="hg" name="bitbucket.org" href="https://bitbucket.org/"/>
+  <repository type="tarball" name="mercurial.selenic.com" href="http://mercurial.selenic.com/release/"/>
+
+  <!-- install this if your system lacks Mercurial -->
+  <distutils id="mercurial">
+    <branch repo="mercurial.selenic.com" version="2.4"
+        module="mercurial-2.4.tar.gz"/>
+  </distutils>
+
+  <distutils id="bpython">
+    <branch repo="bitbucket.org" module="bobf/bpython" />
+  </distutils>
+
+  <distutils id="pygments">
+    <branch repo="bitbucket.org" module="birkenfeld/pygments-main"/>
+  </distutils>
+</moduleset>

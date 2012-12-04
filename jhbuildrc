@@ -14,11 +14,11 @@ modulesets_dir = '~/modulesets'
 # what module set should be used.  The default can be found in
 # jhbuild/defaults.jhbuildrc, but can be any file in the modulesets directory
 # or a URL of a module set file on a web server.
-moduleset = [ 'lsc', 'github' ]
+moduleset = [ 'lsc', 'github', 'bitbucket' ]
 
 #
 # A list of the modules to build.  Defaults to the GNOME core and tested apps.
-modules = [ 'lalsuite', 'gstlal-all' ]
+modules = [ 'lalsuite', 'gstlal-all', 'bpython' ]
 
 # what directory should the source be checked out to? ~/src
 checkoutroot = '~/src'
