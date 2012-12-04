@@ -5,6 +5,14 @@
 <moduleset>
   <repository type="git" name="github.com" href="git@github.com:"/>
 
+  <distutils id="tornado">
+    <branch repo="github.com" module="facebook/tornado" tag="v2.4.1"/>
+  </distutils>
+
+  <distutils id="pyzmq">
+    <branch repo="github.com/downloads" module="zeromq/pyzmq/pyzmq-2.2.0.1.tar.gz" version="2.2.0.1"/>
+  </distutils>
+
   <distutils id="ipython">
     <branch repo="github.com" module="ipython/ipython"/>
   </distutils>
