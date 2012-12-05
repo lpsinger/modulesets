@@ -3,7 +3,9 @@
 <?xml-stylesheet type="text/xsl" href="moduleset.xsl"?>
 <!-- vim:set ts=2 expandtab: -->
 <moduleset>
-  <repository type="git" name="github.com" href="git@github.com:"/>
+  <repository type="git" name="github.com" href="https://github.com/"/>
+  <repository type="tarball" name="github.com/downloads"
+      href="https://github.com/downloads/"/>
 
   <distutils id="tornado">
     <branch repo="github.com" module="facebook/tornado" tag="v2.4.1"/>
