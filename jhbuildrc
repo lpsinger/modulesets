@@ -36,7 +36,7 @@ if not os.path.isdir(buildroot):
 buildroot = os.path.join(buildroot, 'build')
 
 # pretty prompt to tell user when they are in the JHBuild shell
-os.environ['PS1'] = r'\[\033[0;34m\]JHBuild:\[\033[0;32m\]\h\W \u $\[\033[0m\] '
+os.environ['PS1'] = r'\[\033[0;34m\]JHBuild:\[\033[0;32m\]\h:\W \u $\[\033[0m\] '
 
 # the prefix to configure/install modules to (must have write access)
 prefix = '~/local'
