@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import sys
+import getpass
 
 # edit this file to match your settings and copy or symlink it to ~/.config/jhbuildrc
 
@@ -28,11 +29,12 @@ checkoutroot = '~/src'
 #   /usr1/$USER/build
 #   /local/$USER/build
 #	/var/tmp/$USER/build
-buildroot = '/usr1/%s' % os.getlogin()
+user = getpass.getuser()
+buildroot = '/usr1/%s' % user
 if not os.path.isdir(buildroot):
-	buildroot = '/local/user/%s' % os.getlogin()
+	buildroot = '/local/user/%s' % user
 if not os.path.isdir(buildroot):
-	buildroot = '/var/tmp/%s' % os.getlogin()
+	buildroot = '/var/tmp/%s' % user
 buildroot = os.path.join(buildroot, 'build')
 
 # pretty prompt to tell user when they are in the JHBuild shell
