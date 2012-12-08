@@ -19,6 +19,10 @@
     <branch repo="github.com" module="ipython/ipython"/>
   </distutils>
 
+  <distutils id="astropysics">
+    <branch repo="github.com" module="eteq/astropysics"/>
+  </distutils>
+
   <distutils id="astropy">
     <branch repo="github.com" module="astropy/astropy"/>
   </distutils>
