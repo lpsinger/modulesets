@@ -26,7 +26,9 @@ command is in your ``PATH``::
 
   export PATH=$PATH:~/.local/bin
 
-Next, symlink the bundled JHBuild configuration file to ``~/.config/jhbuildrc``::
+Remember to log out and log back in for the new environment variable to take
+effect. Next, symlink the bundled JHBuild configuration file to
+``~/.config/jhbuildrc``::
 
   $ mkdir -p ~/.config && cd ~/.config && ln -s ~/modulesets/jhbuildrc
 
