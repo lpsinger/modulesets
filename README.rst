@@ -15,7 +15,7 @@ home directory under ``~/modulesets`` as follows::
 Next, clone and install JHBuild as follows (adapted from
 <http://developer.gnome.org/jhbuild/unstable/getting-started.html.en>):
 
-  $ mkdir -p src && git clone git://git.gnome.org/jhbuild ~/src/jhbuild
+  $ mkdir -p ~/src && git clone git://git.gnome.org/jhbuild ~/src/jhbuild
   $ cd ~/src/jhbuild
   $ ./autogen.sh
   $ make
