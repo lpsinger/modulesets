@@ -11,8 +11,8 @@ home directory under ``~/modulesets`` as follows::
 
   $ git clone git://github.com/lpsinger/modulesets.git ~/modulesets
 
-Next, clone and install JHBuild as follows
-(adapted from <http://developer.gnome.org/jhbuild/unstable/getting-started.html.en>):
+Next, clone and install JHBuild as follows (adapted from
+<http://developer.gnome.org/jhbuild/unstable/getting-started.html.en>):
 
   $ git clone git://git.gnome.org/jhbuild
   $ cd jhbuild
