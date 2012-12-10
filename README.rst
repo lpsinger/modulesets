@@ -25,6 +25,10 @@ command is in your ``PATH``::
 
   export PATH=$PATH:~/.local/bin
 
+Next, symlink the bundled JHBuild configuration file to ``~/.config/jhbuildrc``::
+
+  $ mkdir -p ~/.config && cd ~/.config && ln -s ~/modulesets/jhbuildrc
+
 Finally, build ``lalsuite`` with:
 
   $ jhbuild build lalsuite
