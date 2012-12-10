@@ -41,8 +41,9 @@ Details
 -------
 
 - Source code for modules is checked out into ``~/src``.
-- For packages that support building out-of-srcdir, the build directory is in
-  ``/usr1/$USER/build``, ``/local/$USER/build``, or ``/var/tmp/$USER/build``, to
+- For packages that support building out-of-srcdir, the build directory is
+  in ``/usr1/$USER/build``, ``/local/$USER/build``,
+  ``/localscratch/$USER/build`` or ``/var/tmp/$USER/build``, to
   accommodate scratch storage locations on LSC data analysis clusters.
 - Packages are installed into ``~/local``.
 - You will be reminded whenever you are inside the JHBuild environment shell

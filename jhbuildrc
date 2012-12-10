@@ -33,6 +33,8 @@ _user = getpass.getuser()
 buildroot = '/usr1/%s' % _user
 if not os.path.isdir(buildroot):
 	buildroot = '/local/user/%s' % _user
+if not os.path.isdir(buildroot);
+	buildroot = '/localscratch/%s' % _user
 if not os.path.isdir(buildroot):
 	buildroot = '/var/tmp/%s' % _user
 buildroot = os.path.join(buildroot, 'build')
