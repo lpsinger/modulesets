@@ -5,6 +5,24 @@ This is my personal collection of JHBuild <https://live.gnome.org/Jhbuild>
 modules for automating build and installation of bleeding-edge packages for
 LIGO data analysis and open source astronomy.
 
+As a taste, installing all of lalsuite and the attendant Python packages
+one-by-one becomes just::
+
+  $ jhbuild build lalsuite
+
+Or, if you'd rather see a progress bar instead of all of the build output,
+you can add the ``-q`` flag::
+
+  $ jhbuild build -q lalsuite
+
+And entering the preconfigured shell with ``PATH``, ``PKG_CONFIG_PATH``,
+``PYTHONPATH``, etc. preconfigured is just::
+
+  $ jhbuild shell
+
+
+Instructions
+------------
 
 To use, first configure git to use your Globus-enabled ssh client by setting the
 environment variable ``GIT_SSH=gsissh``. Then, clone this repository into your
