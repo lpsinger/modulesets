@@ -48,10 +48,17 @@ prefix = '~/local'
 # custom CFLAGS / environment pieces for the build
 # os.environ['CFLAGS'] = '-Wall -g -O0'
 
-# on Mac OS under MacPorts, pkg-config files for some Python packages are in
-# this location.
-if sys.platform == 'darwin':
+# custom environment variables for Mac OS under MacPorts
+if sys.platform == 'darwin' and os.path.isdir('/opt/local/share/macports'):
+	# pkg-config files for Python-version-specific packages
 	addpath('PKG_CONFIG_PATH', '/opt/local/Library/Frameworks/Python.framework/Versions/Current/lib/pkgconfig')
+
+	# also search MacPorts /opt/local/include for C/C++ headers
+	addpath('C_INCLUDE_PATH', '/opt/local/include')
+	addpath('CPLUS_INCLUDE_PATH', '/opt/local/include')
+
+	# use OpenMP-capable version of GCC when building bayestar
+	module_extra_env = {'bayestar': {'CC': 'gcc-mp-4.5', 'CXX': 'g++-mp-4.5', 'CPP': 'cpp-mp-4.5'}}
 
 # extra arguments to pass to all autogen.sh scripts
 # to speed up builds of GNOME, try '--disable-static --disable-gtk-doc'
