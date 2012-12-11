@@ -1,0 +1,12 @@
+<?xml version="1.0"?><!--*- mode: nxml; indent-tabs-mode: nil -*-->
+<!DOCTYPE moduleset SYSTEM "moduleset.dtd">
+<?xml-stylesheet type="text/xsl" href="moduleset.xsl"?>
+<!-- vim:set ts=2 expandtab: -->
+<moduleset>
+  <repository type="svn" name="https://svn.ligo.caltech.edu/svn/nds2/"
+      href="https://svn.ligo.caltech.edu/svn/nds2/" default="yes"/>
+
+  <autotools id="nds2-client" autogen-sh="autoreconf">
+    <branch module="nds2-client" subdir="client"/>
+  </autotools>
+</moduleset>
