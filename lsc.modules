@@ -7,7 +7,8 @@
       href="ligo-vcs.phys.uwm.edu:/usr/local/git/" default="yes"/>
 
   <!-- FIXME: lalsuite autotools packages do not yet support non-srcdir builds
-  under JHBuild; see https://bugs.ligo.org/redmine/issues/644 -->
+  under JHBuild; see https://bugs.ligo.org/redmine/issues/644
+  and https://bugzilla.gnome.org/show_bug.cgi?id=689472 -->
 
   <autotools id="lal" supports-non-srcdir-builds="no" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s --libdir %(libdir)s %(autogenargs)s '" autogenargs="--enable-swig-python">
     <branch module="lalsuite" subdir="lal"/>
@@ -161,7 +162,7 @@
     </dependencies>
   </metamodule>
 
-  <autotools id="gstlal" autogen-sh="autoreconf">
+  <autotools id="gstlal" supports-non-srcdir-builds="no" autogen-sh="autoreconf">
     <branch module="gstlal" subdir="gstlal"/>
     <dependencies>
       <dep package="lal"/>
@@ -175,7 +176,7 @@
     </dependencies>
   </autotools>
 
-  <autotools id="gstlal-ugly" autogen-sh="autoreconf">
+  <autotools id="gstlal-ugly" supports-non-srcdir-builds="no" autogen-sh="autoreconf">
     <branch module="gstlal" subdir="gstlal-ugly"/>
     <dependencies>
       <dep package="lal"/>
@@ -190,7 +191,7 @@
     </dependencies>
   </autotools>
 
-  <autotools id="gstlal-inspiral" autogen-sh="autoreconf">
+  <autotools id="gstlal-inspiral" supports-non-srcdir-builds="no" autogen-sh="autoreconf">
     <branch module="gstlal" subdir="gstlal-inspiral"/>
     <dependencies>
       <dep package="lal"/>
