@@ -212,4 +212,8 @@
   	  <dep package="gstlal-inspiral"/>
   	</dependencies>
   </metamodule>
+
+  <distutils id="bayestar">
+    <branch module="bayestar"/>
+  </distutils>
 </moduleset>
