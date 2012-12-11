@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import sys
+import glob
 import getpass
 
 # edit this file to match your settings and copy or symlink it to ~/.config/jhbuildrc
@@ -71,3 +72,7 @@ if sys.platform == 'darwin' and os.path.isdir('/opt/local/share/macports'):
 # Uncomment to use git-svn instead of svn.
 # svn_program = 'git-svn'
 
+# Execute other *.jhbuildrc files in the same directory as this script.
+for _other_config in glob.iglob(os.path.join(os.path.dirname(__file__), "*.jhbuildrc")):
+	if not os.path.samefile(_other_config, __file__):
+		execfile(_other_config)
