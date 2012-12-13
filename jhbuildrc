@@ -49,6 +49,10 @@ prefix = '~/local'
 # custom CFLAGS / environment pieces for the build
 # os.environ['CFLAGS'] = '-Wall -g -O0'
 
+# FIXME: lalsuite has problems with SWIG when C_INCLUD_PATH is set.
+# See <https://bugs.ligo.org/redmine/issues/644>.
+module_extra_env = dict((key, {'C_INCLUDE_PATH': '', 'CPLUS_INCLUDE_PATH': ''}) for key in ('lal', 'lalframe', 'lalmetaio', 'lalxml', 'lalinspiral', 'lalburst', 'lalsimulation', 'lalpulsar', 'lalstochastic', 'lalinference', 'lalapps'))
+
 # custom environment variables for Mac OS under MacPorts
 if sys.platform == 'darwin' and os.path.isdir('/opt/local/share/macports'):
 	# pkg-config files for Python-version-specific packages
@@ -59,7 +63,7 @@ if sys.platform == 'darwin' and os.path.isdir('/opt/local/share/macports'):
 	addpath('CPLUS_INCLUDE_PATH', '/opt/local/include')
 
 	# use OpenMP-capable version of GCC when building bayestar
-	module_extra_env = {'bayestar': {'CC': 'gcc-mp-4.5', 'CXX': 'g++-mp-4.5', 'CPP': 'cpp-mp-4.5'}}
+	module_extra_env['bayestar'] = {'CC': 'gcc-mp-4.5', 'CXX': 'g++-mp-4.5', 'CPP': 'cpp-mp-4.5'}
 
 # extra arguments to pass to all autogen.sh scripts
 # to speed up builds of GNOME, try '--disable-static --disable-gtk-doc'
