@@ -41,6 +41,10 @@ if not os.path.isdir(buildroot):
     buildroot = '/var/tmp/%s' % _user
 buildroot = os.path.join(buildroot, 'build')
 
+#
+# directory for HTML build logs (run 'jhbuild tinderbox')
+tinderbox_outputdir = os.path.join(buildroot, 'html')
+
 # pretty prompt to tell user when they are in the JHBuild shell
 os.environ['PS1'] = r'\[\033[0;34m\]JHBuild:\[\033[0;32m\]\h:\W \u $\[\033[0m\] '
 
