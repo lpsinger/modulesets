@@ -29,6 +29,7 @@ checkoutroot = '~/src'
 # Try, in the following order:
 #   /usr1/$USER/build
 #   /local/$USER/build
+#   /localscratch/$USER/build
 #   /var/tmp/$USER/build
 _user = getpass.getuser()
 buildroot = '/usr1/%s' % _user
