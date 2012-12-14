@@ -29,15 +29,15 @@ checkoutroot = '~/src'
 # Try, in the following order:
 #   /usr1/$USER/build
 #   /local/$USER/build
-#	/var/tmp/$USER/build
+#   /var/tmp/$USER/build
 _user = getpass.getuser()
 buildroot = '/usr1/%s' % _user
 if not os.path.isdir(buildroot):
-	buildroot = '/local/user/%s' % _user
+    buildroot = '/local/user/%s' % _user
 if not os.path.isdir(buildroot):
-	buildroot = '/localscratch/%s' % _user
+    buildroot = '/localscratch/%s' % _user
 if not os.path.isdir(buildroot):
-	buildroot = '/var/tmp/%s' % _user
+    buildroot = '/var/tmp/%s' % _user
 buildroot = os.path.join(buildroot, 'build')
 
 # pretty prompt to tell user when they are in the JHBuild shell
@@ -55,15 +55,15 @@ module_extra_env = dict((key, {'C_INCLUDE_PATH': '', 'CPLUS_INCLUDE_PATH': ''}) 
 
 # custom environment variables for Mac OS under MacPorts
 if sys.platform == 'darwin' and os.path.isdir('/opt/local/share/macports'):
-	# pkg-config files for Python-version-specific packages
-	addpath('PKG_CONFIG_PATH', '/opt/local/Library/Frameworks/Python.framework/Versions/Current/lib/pkgconfig')
+    # pkg-config files for Python-version-specific packages
+    addpath('PKG_CONFIG_PATH', '/opt/local/Library/Frameworks/Python.framework/Versions/Current/lib/pkgconfig')
 
-	# also search MacPorts /opt/local/include for C/C++ headers
-	addpath('C_INCLUDE_PATH', '/opt/local/include')
-	addpath('CPLUS_INCLUDE_PATH', '/opt/local/include')
+    # also search MacPorts /opt/local/include for C/C++ headers
+    addpath('C_INCLUDE_PATH', '/opt/local/include')
+    addpath('CPLUS_INCLUDE_PATH', '/opt/local/include')
 
-	# use OpenMP-capable version of GCC when building bayestar
-	module_extra_env['bayestar'] = {'CC': 'llvm-gcc', 'CXX': 'llvm-g++', 'CPP': 'cpp'}
+    # use OpenMP-capable version of GCC when building bayestar
+    module_extra_env['bayestar'] = {'CC': 'llvm-gcc', 'CXX': 'llvm-g++', 'CPP': 'cpp'}
 
 # extra arguments to pass to all autogen.sh scripts
 # to speed up builds of GNOME, try '--disable-static --disable-gtk-doc'
@@ -78,5 +78,5 @@ if sys.platform == 'darwin' and os.path.isdir('/opt/local/share/macports'):
 
 # Execute other *.jhbuildrc files in the same directory as this script.
 for _other_config in glob.iglob(os.path.join(os.path.dirname(__file__), "*.jhbuildrc")):
-	if not os.path.samefile(_other_config, __file__):
-		execfile(_other_config)
+    if not os.path.samefile(_other_config, __file__):
+        execfile(_other_config)
