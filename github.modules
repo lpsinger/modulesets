@@ -3,12 +3,12 @@
 <?xml-stylesheet type="text/xsl" href="moduleset.xsl"?>
 <!-- vim:set ts=2 expandtab: -->
 <moduleset>
-  <repository type="git" name="github.com" href="https://github.com/"/>
+  <repository type="git" name="github.com" href="https://github.com/" default="yes"/>
   <repository type="tarball" name="github.com/downloads"
       href="https://github.com/downloads/"/>
 
   <distutils id="tornado">
-    <branch repo="github.com" module="facebook/tornado" tag="v2.4.1"/>
+    <branch module="facebook/tornado" tag="v2.4.1"/>
   </distutils>
 
   <distutils id="pyzmq">
@@ -16,26 +16,26 @@
   </distutils>
 
   <distutils id="ipython">
-    <branch repo="github.com" module="ipython/ipython"/>
+    <branch module="ipython/ipython"/>
   </distutils>
 
   <distutils id="astropysics">
-    <branch repo="github.com" module="eteq/astropysics"/>
+    <branch module="eteq/astropysics"/>
   </distutils>
 
   <distutils id="astropy">
-    <branch repo="github.com" module="astropy/astropy"/>
+    <branch module="astropy/astropy"/>
   </distutils>
 
   <distutils id="astroquery">
-    <branch repo="github.com" module="astropy/astroquery"/>
+    <branch module="astropy/astroquery"/>
     <dependencies>
       <dep package="astropy"/>
     </dependencies>
   </distutils>
 
   <distutils id="photutils">
-    <branch repo="github.com" module="astropy/photutils"/>
+    <branch module="astropy/photutils"/>
     <dependencies>
       <dep package="astropy"/>
     </dependencies>
@@ -50,14 +50,14 @@
   </metamodule>
 
   <autotools id="gst-plugins-cairovis" autogen-sh="autoreconf">
-    <branch repo="github.com" module="lpsinger/gst-plugins-cairovis"/>
+    <branch module="lpsinger/gst-plugins-cairovis"/>
   </autotools>
 
   <autotools id="gst-plugins-math" autogen-sh="autoreconf">
-    <branch repo="github.com" module="lpsinger/gst-plugins-math"/>
+    <branch module="lpsinger/gst-plugins-math"/>
   </autotools>
 
   <autotools id="bash_pattern" autogen-sh="autoreconf">
-    <branch repo="github.com" module="lpsinger/bash_pattern"/>
+    <branch module="lpsinger/bash_pattern"/>
   </autotools>
 </moduleset>
