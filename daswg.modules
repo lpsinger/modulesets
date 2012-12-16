@@ -1,0 +1,16 @@
+<?xml version="1.0"?><!--*- mode: nxml; indent-tabs-mode: nil -*-->
+<!DOCTYPE moduleset SYSTEM "moduleset.dtd">
+<?xml-stylesheet type="text/xsl" href="moduleset.xsl"?>
+<!-- vim:set ts=2 expandtab: -->
+<moduleset>
+  <repository type="tarball" name="daswg"
+      href="https://www.lsc-group.phys.uwm.edu/daswg/download/software/source/" default="yes"/>
+
+  <autotools id="libframe" autogen-sh="autoreconf">
+    <branch module="libframe-8.17.2.tar.gz" version="8.17.2"/>
+  </autotools>
+
+  <autotools id="libmetaio" autogen-sh="autoreconf">
+    <branch module="libmetaio-6.1.tar.gz" version="6.1"/>
+  </autotools>
+</moduleset>
