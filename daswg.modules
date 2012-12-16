@@ -11,6 +11,6 @@
   </autotools>
 
   <autotools id="libmetaio" autogen-sh="autoreconf">
-    <branch module="libmetaio-6.1.tar.gz" version="6.1"/>
+    <branch module="metaio-8.3.0.tar.gz" version="8.3.0"/>
   </autotools>
 </moduleset>
