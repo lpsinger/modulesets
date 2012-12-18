@@ -107,8 +107,8 @@
     </dependencies>
   </autotools>
 
-  <distutils id="pylal">
-    <branch module="lalsuite" supports-non-srcdir-builds="no" subdir="pylal"/>
+  <distutils id="pylal" supports-non-srcdir-builds="no">
+    <branch module="lalsuite" subdir="pylal"/>
     <dependencies>
       <dep package="lal"/>
       <dep package="lalframe"/>
@@ -119,23 +119,23 @@
     </dependencies>
   </distutils>
 
-  <distutils id="glue">
-    <branch module="lalsuite" supports-non-srcdir-builds="no" subdir="glue"/>
+  <distutils id="glue" supports-non-srcdir-builds="no">
+    <branch module="lalsuite" subdir="glue"/>
   </distutils>
 
-  <distutils id="ligo">
-    <branch module="lalsuite" supports-non-srcdir-builds="no" subdir="ligo"/>
+  <distutils id="ligo" supports-non-srcdir-builds="no">
+    <branch module="lalsuite" subdir="ligo"/>
   </distutils>
 
-  <distutils id="lvalert">
-    <branch module="lalsuite" supports-non-srcdir-builds="no" subdir="lvalert"/>
+  <distutils id="lvalert" supports-non-srcdir-builds="no">
+    <branch module="lalsuite" subdir="lvalert"/>
     <dependencies>
       <dep package="ligo"/>
     </dependencies>
   </distutils>
 
-  <distutils id="gracedb">
-    <branch module="lalsuite" supports-non-srcdir-builds="no" subdir="gracedb"/>
+  <distutils id="gracedb" supports-non-srcdir-builds="no">
+    <branch module="lalsuite" subdir="gracedb"/>
     <dependencies>
       <dep package="ligo"/>
     </dependencies>
