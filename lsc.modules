@@ -138,6 +138,7 @@
     <branch module="lalsuite" subdir="gracedb"/>
     <dependencies>
       <dep package="ligo"/>
+      <dep package="glue"/>
     </dependencies>
   </distutils>
 
