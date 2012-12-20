@@ -31,7 +31,7 @@ home directory under ``~/modulesets`` as follows::
   $ git clone git://github.com/lpsinger/modulesets.git ~/modulesets
 
 Next, clone and install JHBuild as follows (adapted from
-<http://developer.gnome.org/jhbuild/unstable/getting-started.html.en>):
+<http://developer.gnome.org/jhbuild/unstable/getting-started.html.en>)::
 
   $ mkdir -p ~/src && git clone git://git.gnome.org/jhbuild ~/src/jhbuild
   $ cd ~/src/jhbuild
@@ -50,7 +50,7 @@ effect. Next, symlink the bundled JHBuild configuration file to
 
   $ mkdir -p ~/.config && cd ~/.config && ln -s ~/modulesets/jhbuildrc
 
-Finally, build ``lalsuite`` with:
+Finally, build ``lalsuite`` with::
 
   $ jhbuild build lalsuite
 
