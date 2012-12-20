@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>JHBuild Modulesets for LIGO and Open Source Astronomy by lpsinger</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>JHBuild Modulesets for LIGO and Open Source Astronomy</h1>
+        <p>Module sets and configuration files for building LIGO data analysis software and open source astronomy software with JHBuild</p>
+
+        <p class="view"><a href="https://github.com/lpsinger/modulesets">View the Project on GitHub <small>lpsinger/modulesets</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/lpsinger/modulesets/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/lpsinger/modulesets/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/lpsinger/modulesets">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>JHBuild modulesets for LIGO and open-source astronomy software</h1>
+
+<p>This is my personal collection of JHBuild (<a href="https://live.gnome.org/Jhbuild">https://live.gnome.org/Jhbuild</a>)
+modules for automating build and installation of bleeding-edge packages for
+LIGO data analysis and open source astronomy.</p>
+
+<p>As a taste, installing all of lalsuite and the attendant Python packages
+one-by-one becomes just:</p>
+
+<pre><code>$ jhbuild build lalsuite
+</code></pre>
+
+<p>Or, if you'd rather see a progress bar instead of all of the build output,
+you can add the <code>-q</code> flag:</p>
+
+<pre><code>$ jhbuild build -q lalsuite
+</code></pre>
+
+<p>And entering the preconfigured shell with <code>PATH</code>, <code>PKG_CONFIG_PATH</code>,
+<code>PYTHONPATH</code>, etc. preconfigured is just:</p>
+
+<pre><code>$ jhbuild shell
+</code></pre>
+
+<h2>Instructions</h2>
+
+<p>To use, first clone this repository into your home directory under
+<code>~/modulesets</code> as follows:</p>
+
+<pre><code>$ git clone git://github.com/lpsinger/modulesets.git ~/modulesets
+</code></pre>
+
+<p>Next, clone and install JHBuild as follows (adapted from
+<a href="http://developer.gnome.org/jhbuild/unstable/getting-started.html.en">http://developer.gnome.org/jhbuild/unstable/getting-started.html.en</a>):</p>
+
+<pre><code>$ mkdir -p ~/src &amp;&amp; git clone git://git.gnome.org/jhbuild ~/src/jhbuild
+$ cd ~/src/jhbuild
+$ ./autogen.sh
+$ make
+$ make install
+</code></pre>
+
+<p>Optionally, add the following line to your login script so that the <code>jhbuild</code>
+command is in your <code>PATH</code>:</p>
+
+<pre><code>export PATH=$PATH:~/.local/bin
+</code></pre>
+
+<p>Remember to log out and log back in for the new environment variable to take
+effect. Next, symlink the bundled JHBuild configuration file to
+<code>~/.config/jhbuildrc</code>:</p>
+
+<pre><code>$ mkdir -p ~/.config &amp;&amp; cd ~/.config &amp;&amp; ln -s ~/modulesets/jhbuildrc
+</code></pre>
+
+<p>Finally, build <code>lalsuite</code> with:</p>
+
+<pre><code>$ jhbuild build lalsuite
+</code></pre>
+
+<p>To start a shell with your newly built packages in the environment, run:</p>
+
+<pre><code>$ jhbuild shell
+</code></pre>
+
+<h2>Details</h2>
+
+<ul>
+<li><p>Source code for modules is checked out into <code>~/src</code>.</p></li>
+<li><p>For packages that support building out-of-srcdir, the build directory is
+in <code>/usr1/$USER/build</code>, <code>/local/$USER/build</code>,
+<code>/localscratch/$USER/build</code> or <code>/var/tmp/$USER/build</code>, to
+accommodate scratch storage locations on LSC data analysis clusters.</p></li>
+<li><p>Packages are installed into <code>~/local</code>.</p></li>
+<li><p>You will be reminded whenever you are inside the JHBuild environment shell
+by the colorized prompt beginning with the text <code>JHBuild:</code>.</p></li>
+</ul>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/lpsinger">lpsinger</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
