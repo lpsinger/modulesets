@@ -24,9 +24,8 @@ And entering the preconfigured shell with ``PATH``, ``PKG_CONFIG_PATH``,
 Instructions
 ------------
 
-To use, first configure git to use your Globus-enabled ssh client by setting the
-environment variable ``GIT_SSH=gsissh``. Then, clone this repository into your
-home directory under ``~/modulesets`` as follows::
+To use, first clone this repository into your home directory under
+``~/modulesets`` as follows::
 
   $ git clone git://github.com/lpsinger/modulesets.git ~/modulesets
 
