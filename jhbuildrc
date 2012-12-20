@@ -67,6 +67,9 @@ if sys.platform == 'darwin' and os.path.isdir('/opt/local/share/macports'):
     addpath('C_INCLUDE_PATH', '/opt/local/include')
     addpath('CPLUS_INCLUDE_PATH', '/opt/local/include')
 
+    # also add MacPorts to the dynamic linker path.
+    addpath('DYLD_FALLBACK_LIBRARY_PATH', '/opt/local/lib')
+
     # use OpenMP-capable version of GCC when building bayestar
     module_extra_env['bayestar'] = {'CC': 'gcc-mp-4.5', 'CXX': 'g++-mp-4.5', 'CPP': 'cpp-mp-4.5'}
 
