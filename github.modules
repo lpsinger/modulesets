@@ -19,6 +19,14 @@
     <branch module="ipython/ipython"/>
   </distutils>
 
+  <distutils id="matplotlib">
+    <branch module="matplotlib/matplotlib"/>
+  </distutils>
+
+  <distutils id="aplpy">
+    <branch module="aplpy/aplpy"/>
+  </distutils>
+
   <distutils id="astropysics">
     <branch module="eteq/astropysics"/>
   </distutils>
