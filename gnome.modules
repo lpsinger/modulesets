@@ -1,0 +1,15 @@
+<?xml version="1.0"?><!--*- mode: nxml; indent-tabs-mode: nil -*-->
+<!DOCTYPE moduleset SYSTEM "moduleset.dtd">
+<?xml-stylesheet type="text/xsl" href="moduleset.xsl"?>
+<!-- vim:set ts=2 expandtab: -->
+<moduleset>
+  <repository type="git" name="git.gnome.org" href="git://git.gnome.org/" default="yes"/>
+
+  <autotools id="cogl" supports-non-srcdir-builds="no" autogenargs="--without-x --disable-glx --enable-quartz-image">
+    <branch module="cogl"/>
+  </autotools>
+
+  <autotools id="clutter">
+    <branch module="clutter"/>
+  </autotools>
+</moduleset>
