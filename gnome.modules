@@ -5,7 +5,7 @@
 <moduleset>
   <repository type="git" name="git.gnome.org" href="git://git.gnome.org/" default="yes"/>
 
-  <autotools id="cogl" supports-non-srcdir-builds="no" autogenargs="--without-x --disable-glx --enable-quartz-image">
+  <autotools id="cogl">
     <branch module="cogl"/>
   </autotools>
 
