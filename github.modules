@@ -23,6 +23,14 @@
     <branch module="matplotlib/matplotlib"/>
   </distutils>
 
+  <distutils id="shapely">
+    <branch module="sgillies/shapely"/>
+  </distutils>
+
+  <distutils id="python-novas">
+    <branch module="brandon-rhodes/python-novas"/>
+  </distutils>
+
   <distutils id="aplpy">
     <branch module="aplpy/aplpy"/>
   </distutils>
