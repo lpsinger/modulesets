@@ -23,8 +23,15 @@
     <branch module="matplotlib/matplotlib"/>
   </distutils>
 
+  <autotools id="geos" autogen-sh="autoreconf">
+    <branch module="libgeos/libgeos" revision="svn-trunk"/>
+  </autotools>
+
   <distutils id="shapely">
     <branch module="sgillies/shapely"/>
+    <dependencies>
+      <dep package="geos"/>
+    </dependencies>
   </distutils>
 
   <distutils id="python-novas">
