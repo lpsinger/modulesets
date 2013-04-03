@@ -7,12 +7,20 @@
   <repository type="tarball" name="github.com/downloads"
       href="https://github.com/downloads/"/>
 
+  <distutils id="jinja2">
+    <branch module="mitsuhiko/jinja2" tag="2.6"/>
+  </distutils>
+
   <distutils id="tornado">
-    <branch module="facebook/tornado" tag="v2.4.1"/>
+    <branch module="facebook/tornado" tag="v3.0.0"/>
+  </distutils>
+
+  <distutils id="cython">
+    <branch module="cython/cython" tag="0.18"/>
   </distutils>
 
   <distutils id="pyzmq">
-    <branch repo="github.com/downloads" module="zeromq/pyzmq/pyzmq-2.2.0.1.tar.gz" version="2.2.0.1"/>
+    <branch module="zeromq/pyzmq" tag="v13.0.2"/>
   </distutils>
 
   <distutils id="ipython">
@@ -21,6 +29,10 @@
 
   <distutils id="matplotlib">
     <branch module="matplotlib/matplotlib"/>
+  </distutils>
+
+  <distutils id="numpy">
+    <branch module="numpy/numpy"/>
   </distutils>
 
   <autotools id="geos" autogen-sh="autoreconf">
