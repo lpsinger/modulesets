@@ -23,6 +23,10 @@
     <branch module="zeromq/pyzmq" tag="v13.0.2"/>
   </distutils>
 
+  <distutils id="emcee">
+    <branch module="dfm/emcee"/>
+  </distutils>
+
   <distutils id="ipython">
     <branch module="ipython/ipython"/>
   </distutils>
