@@ -27,6 +27,10 @@
     <branch module="dfm/emcee"/>
   </distutils>
 
+  <distutils id="pyephem">
+    <branch module="brandon-rhodes/pyephem"/>
+  </distutils>
+
   <distutils id="ipython">
     <branch module="ipython/ipython"/>
   </distutils>
