@@ -43,6 +43,10 @@
     <branch module="numpy/numpy"/>
   </distutils>
 
+  <distutils id="scipy">
+    <branch module="scipy/scipy"/>
+  </distutils>
+
   <autotools id="geos" autogen-sh="autoreconf">
     <branch module="libgeos/libgeos" revision="svn-trunk"/>
   </autotools>
@@ -68,6 +72,14 @@
 
   <distutils id="astropy">
     <branch module="astropy/astropy"/>
+  </distutils>
+
+  <distutils id="pywcsgrid2">
+    <branch module="leejjoon/pywcsgrid2"/>
+  </distutils>
+
+  <distutils id="montage-wrapper">
+    <branch module="astropy/montage-wrapper"/>
   </distutils>
 
   <distutils id="astroquery">
