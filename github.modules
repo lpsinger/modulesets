@@ -66,6 +66,10 @@
     <branch module="aplpy/aplpy"/>
   </distutils>
 
+  <distutils id="healpy">
+    <branch module="healpy/healpy"/>
+  </distutils>
+
   <distutils id="astropysics">
     <branch module="eteq/astropysics"/>
   </distutils>
