@@ -7,6 +7,10 @@
   <repository type="tarball" name="github.com/downloads"
       href="https://github.com/downloads/"/>
 
+  <distutils id="pyfits">
+    <branch module="spacetelescope/PyFITS" tag="v3.2.0"/>
+  </distutils>
+
   <distutils id="jinja2">
     <branch module="mitsuhiko/jinja2" tag="2.6"/>
   </distutils>
