@@ -70,9 +70,39 @@
     <branch module="aplpy/aplpy"/>
   </distutils>
 
+  <autotools id="cfitsio" autogen-sh="configure" supports-non-srcdir-builds="no">
+    <branch module="healpy/cfitsio"/>
+  </autotools>
+
+  <autotools id="healpix-c" supports-non-srcdir-builds="no" autogen-sh="autoreconf">
+    <branch module="healpy/healpixmirror" subdir="src/C/autotools"/>
+    <dependencies>
+      <dep package="cfitsio"/>
+    </dependencies>
+  </autotools>
+
+  <autotools id="healpix-cxx" supports-non-srcdir-builds="no" autogen-sh="autoreconf">
+    <branch module="healpy/healpixmirror" subdir="src/cxx/autotools"/>
+    <dependencies>
+      <dep package="cfitsio"/>
+    </dependencies>
+  </autotools>
+
   <distutils id="healpy">
     <branch module="healpy/healpy"/>
+    <dependencies>
+      <dep package="cfitsio"/>
+      <dep package="healpix-cxx"/>
+    </dependencies>
   </distutils>
+
+  <metamodule id="healpix">
+    <dependencies>
+      <dep package="healpix-c"/>
+      <dep package="healpix-cxx"/>
+      <dep package="healpy"/>
+    </dependencies>
+  </metamodule>
 
   <distutils id="astropysics">
     <branch module="eteq/astropysics"/>
