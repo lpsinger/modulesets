@@ -7,6 +7,10 @@
   <repository type="tarball" name="github.com/downloads"
       href="https://github.com/downloads/"/>
 
+  <distutils id="pykg-config">
+    <branch module="gbiggs/pykg-config"/>
+  </distutils>
+
   <distutils id="pyfits">
     <branch module="spacetelescope/PyFITS" tag="v3.2.0"/>
   </distutils>
