@@ -19,36 +19,68 @@
     <branch module="spacetelescope/PyFITS" tag="v3.2.0"/>
   </distutils>
 
+  <distutils id="twilio-python">
+    <branch module="twilio/twilio-python" tag="3.5.1"/>
+  </distutils>
+
+  <distutils id="python-phonenumbers" tag="release-5.6b1">
+    <branch module="daviddrysdale/python-phonenumbers"/>
+  </distutils>
+
+  <distutils id="django-htmlmin">
+    <branch module="cobrateam/django-htmlmin" tag="0.6.2"/>
+  </distutils>
+
+  <distutils id="itsdangerous">
+    <branch module="mitsuhiko/itsdangerous" tag="0.21"/>
+  </distutils>
+
   <distutils id="jinja2">
-    <branch module="mitsuhiko/jinja2" tag="2.6"/>
+    <branch module="mitsuhiko/jinja2" tag="2.7"/>
+  </distutils>
+
+  <distutils id="werkzeug">
+    <branch module="mitsuhiko/werkzeug" tag="0.9.1"/>
+  </distutils>
+
+  <distutils id="flask">
+    <branch module="mitsuhiko/flask" tag="0.10.1"/>
+    <dependencies>
+      <dep package="itsdangerous"/>
+      <dep package="werkzeug"/>
+      <dep package="jinja2"/>
+    </dependencies>
+  </distutils>
+
+  <distutils id="sqlalchemy">
+    <branch module="zzzeek/sqlalchemy" tag="rel_0_8_1"/>
+  </distutils>
+
+  <distutils id="flask-sqlalchemy">
+    <branch module="mitsuhiko/flask-sqlalchemy" tag="0.16"/>
+    <dependencies>
+      <dep package="flask"/>
+      <dep package="sqlalchemy"/>
+    </dependencies>
+  </distutils>
+
+  <distutils id="flask-mail">
+    <branch module="mattupstate/flask-mail" tag="0.9.0"/>
+    <dependencies>
+      <dep package="flask"/>
+    </dependencies>
   </distutils>
 
   <distutils id="tornado">
-    <branch module="facebook/tornado" tag="v3.0.0"/>
-  </distutils>
-
-  <distutils id="cython">
-    <branch module="cython/cython" tag="0.18"/>
+    <branch module="facebook/tornado" tag="v2.4.1"/>
   </distutils>
 
   <distutils id="pyzmq">
-    <branch module="zeromq/pyzmq" tag="v13.0.2"/>
-  </distutils>
-
-  <distutils id="emcee">
-    <branch module="dfm/emcee"/>
-  </distutils>
-
-  <distutils id="pyephem">
-    <branch module="brandon-rhodes/pyephem"/>
+    <branch repo="github.com/downloads" module="zeromq/pyzmq/pyzmq-2.2.0.1.tar.gz" version="2.2.0.1"/>
   </distutils>
 
   <distutils id="ipython">
     <branch module="ipython/ipython"/>
-  </distutils>
-
-  <distutils id="matplotlib">
-    <branch module="matplotlib/matplotlib"/>
   </distutils>
 
   <distutils id="numpy">
@@ -57,6 +89,10 @@
 
   <distutils id="scipy">
     <branch module="scipy/scipy"/>
+  </distutils>
+
+  <distutils id="matplotlib">
+    <branch module="matplotlib/matplotlib"/>
   </distutils>
 
   <autotools id="geos" autogen-sh="autoreconf">
