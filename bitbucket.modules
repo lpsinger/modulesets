@@ -12,6 +12,10 @@
         module="mercurial-2.4.tar.gz"/>
   </distutils>
 
+  <distutils id="blinker">
+    <branch repo="bitbucket.org" module="jek/blinker" tag="rel-1.2"/>
+  </distutils>
+
   <distutils id="bpython">
     <branch repo="bitbucket.org" module="bobf/bpython" />
   </distutils>
