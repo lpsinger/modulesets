@@ -7,6 +7,10 @@
   <repository type="tarball" name="github.com/downloads"
       href="https://github.com/downloads/"/>
 
+  <distutils id="pygcn">
+    <branch module="lpsinger/pygcn"/>
+  </distutils>
+
   <distutils id="pykg-config">
     <branch module="gbiggs/pykg-config"/>
   </distutils>
