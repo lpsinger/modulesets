@@ -7,6 +7,10 @@
   <repository type="tarball" name="github.com/downloads"
       href="https://github.com/downloads/"/>
 
+  <distutils id="pyephem">
+    <branch module="brandon-rhodes/pyephem" tag="v3.7.5.2"/>
+  </distutils>
+
   <distutils id="blinker">
     <branch module="jek/blinker" tag="rel-1.3"/>
   </distutils>
