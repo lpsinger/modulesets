@@ -7,6 +7,10 @@
   <repository type="tarball" name="github.com/downloads"
       href="https://github.com/downloads/"/>
 
+  <distutils id="cython">
+    <branch module="cython/cython" tag="0.20.1"/>
+  </distutils>
+
   <distutils id="lxml">
     <branch module="lxml/lxml" tag="lxml-3.3.1"/>
   </distutils>
