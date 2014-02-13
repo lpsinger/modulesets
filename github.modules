@@ -7,6 +7,10 @@
   <repository type="tarball" name="github.com/downloads"
       href="https://github.com/downloads/"/>
 
+  <distutils id="blinker">
+    <branch module="jek/blinker" tag="rel-1.3"/>
+  </distutils>
+
   <distutils id="pygcn">
     <branch module="lpsinger/pygcn"/>
   </distutils>
@@ -49,6 +53,7 @@
       <dep package="itsdangerous"/>
       <dep package="werkzeug"/>
       <dep package="jinja2"/>
+      <dep package="blinker"/>
     </dependencies>
   </distutils>
 
