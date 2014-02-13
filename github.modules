@@ -7,6 +7,10 @@
   <repository type="tarball" name="github.com/downloads"
       href="https://github.com/downloads/"/>
 
+  <distutils id="lxml">
+    <branch module="lxml/lxml" tag="lxml-3.3.1"/>
+  </distutils>
+
   <distutils id="pyephem">
     <branch module="brandon-rhodes/pyephem" tag="v3.7.5.2"/>
   </distutils>
