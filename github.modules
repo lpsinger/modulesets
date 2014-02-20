@@ -7,6 +7,10 @@
   <repository type="tarball" name="github.com/downloads"
       href="https://github.com/downloads/"/>
 
+  <distutils id="functools32">
+    <branch module="MiCHiLU/python-functools32" tag="3.2.3"/>
+  </distutils>
+
   <distutils id="cython">
     <branch module="cython/cython" tag="0.20.1"/>
   </distutils>
