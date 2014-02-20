@@ -7,6 +7,10 @@
   <repository type="tarball" name="github.com/downloads"
       href="https://github.com/downloads/"/>
 
+  <distutils id="pillow">
+    <branch module="python-imaging/Pillow" tag="2.3.0"/>
+  </distutils>
+
   <distutils id="functools32">
     <branch module="MiCHiLU/python-functools32" tag="3.2.3-1"/>
   </distutils>
