@@ -8,7 +8,7 @@
       href="https://github.com/downloads/"/>
 
   <distutils id="functools32">
-    <branch module="MiCHiLU/python-functools32" tag="3.2.3"/>
+    <branch module="MiCHiLU/python-functools32" tag="3.2.3-1"/>
   </distutils>
 
   <distutils id="cython">
