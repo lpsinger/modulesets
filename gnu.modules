@@ -1,0 +1,13 @@
+<?xml version="1.0"?><!--*- mode: nxml; indent-tabs-mode: nil -*-->
+<!DOCTYPE moduleset SYSTEM "moduleset.dtd">
+<?xml-stylesheet type="text/xsl" href="moduleset.xsl"?>
+<!-- vim:set ts=2 expandtab: -->
+<moduleset>
+  <repository type="tarball" name="gnu.org"
+      href="http://ftpmirror.gnu.org/" default="yes"/>
+
+  <autotools id="gsl" autogen-sh="autoreconf">
+    <branch module="gsl/gsl-1.16.tar.gz" version="1.16"
+      hash="sha256:73bc2f51b90d2a780e6d266d43e487b3dbd78945dd0b04b14ca5980fe28d2f53"/>
+  </autotools>
+</moduleset>
