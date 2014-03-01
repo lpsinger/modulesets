@@ -1,0 +1,56 @@
+<?xml version="1.0"?><!--*- mode: nxml; indent-tabs-mode: nil -*-->
+<!DOCTYPE moduleset SYSTEM "moduleset.dtd">
+<?xml-stylesheet type="text/xsl" href="moduleset.xsl"?>
+<!-- vim:set ts=2 expandtab: -->
+<moduleset>
+  <repository type="tarball" name="sf"
+    href="http://downloads.sourceforge.net/"/>
+  <repository type="tarball" name="pypi"
+    href="http://pypi.python.org/packages/source/"/>
+  <repository type="tarball" name="heasarc"
+    href="ftp://heasarc.gsfc.nasa.gov/software/"/>
+  <repository type="git" name="github"
+    href="https://github.com/"/>
+
+  <autotools id="cfitsio" autogen-sh="configure" supports-non-srcdir-builds="no">
+    <branch repo="heasarc"
+      module="fitsio/c/cfitsio3360.tar.gz" version="3.360"
+      hash="sha1:946dce52528b0e4eb865db75c4e103cdd8cf51f8"
+      checkoutdir="cfitsio"/>
+  </autotools>
+
+  <autotools id="chealpix" autogen-sh="configure">
+    <branch repo="sf"
+      module="healpix/chealpix-3.11.4.tar.gz" version="3.11.4"
+      hash="sha1:214484d8959f37f890338c1624b0152f68c9a49d"/>
+    <dependencies>
+      <dep package="cfitsio"/>
+    </dependencies>
+  </autotools>
+
+  <autotools id="healpix_cxx" autogen-sh="configure">
+    <branch repo="sf"
+      module="healpix/healpix_cxx-3.11.2.tar.gz" version="3.11.2"
+      hash="sha1:982620220ef578b5eb9a79357200ee0c1fd7b090"/>
+    <dependencies>
+      <dep package="cfitsio"/>
+    </dependencies>
+  </autotools>
+
+  <distutils id="healpy">
+    <branch repo="github"
+      module="healpy/healpy" tag="1.7.4" version="1.7.4"/>
+    <dependencies>
+      <dep package="cfitsio"/>
+      <dep package="healpix_cxx"/>
+    </dependencies>
+  </distutils>
+
+  <metamodule id="healpix">
+    <dependencies>
+      <dep package="chealpix"/>
+      <dep package="healpix_cxx"/>
+      <dep package="healpy"/>
+    </dependencies>
+  </metamodule>
+</moduleset>
