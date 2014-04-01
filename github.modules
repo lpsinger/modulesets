@@ -120,6 +120,10 @@
     <branch module="matplotlib/matplotlib"/>
   </distutils>
 
+  <distutils id="emcee">
+    <branch module="dfm/emcee"/>
+  </distutils>
+
   <autotools id="geos" autogen-sh="autoreconf">
     <branch module="libgeos/libgeos" revision="svn-trunk"/>
   </autotools>
