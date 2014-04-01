@@ -124,6 +124,10 @@
     <branch module="dfm/emcee"/>
   </distutils>
 
+  <distutils id="acor">
+    <branch module="dfm/acor"/>
+  </distutils>
+
   <autotools id="geos" autogen-sh="autoreconf">
     <branch module="libgeos/libgeos" revision="svn-trunk"/>
   </autotools>
