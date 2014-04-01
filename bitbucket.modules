@@ -19,4 +19,8 @@
   <distutils id="pygments">
     <branch repo="bitbucket.org" module="birkenfeld/pygments-main"/>
   </distutils>
+
+  <distutils id="setuptools">
+    <branch repo="bitbucket.org" module="lsinger/setuptools"/>
+  </distutils>
 </moduleset>
