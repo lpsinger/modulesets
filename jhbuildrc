@@ -57,10 +57,6 @@ os.environ['GST_PLUGIN_PATH'] = os.path.expanduser('~/local/lib/gstreamer-0.10')
 # custom CFLAGS / environment pieces for the build
 # os.environ['CFLAGS'] = '-Wall -g -O0'
 
-# FIXME: lalsuite has problems with SWIG when C_INCLUD_PATH is set.
-# See <https://bugs.ligo.org/redmine/issues/644>.
-module_extra_env = dict((key, {'C_INCLUDE_PATH': '', 'CPLUS_INCLUDE_PATH': ''}) for key in ('lal', 'lalframe', 'lalmetaio', 'lalxml', 'lalinspiral', 'lalburst', 'lalsimulation', 'lalpulsar', 'lalstochastic', 'lalinference', 'lalapps'))
-
 # custom environment variables for Mac OS under MacPorts
 if sys.platform == 'darwin' and os.path.isdir('/opt/local/share/macports'):
     # pkg-config files for Python-version-specific packages
