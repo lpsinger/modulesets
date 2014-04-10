@@ -54,7 +54,7 @@
     </dependencies>
   </autotools>
 
-  <autotools id="lalsimulation" supports-non-srcdir-builds="no" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s --libdir %(libdir)s %(autogenargs)s '" autogenargs="--enable-swig-python">
+  <autotools id="lalsimulation" supports-non-srcdir-builds="no" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s --libdir %(libdir)s %(autogenargs)s '" autogenargs="--enable-swig-python --enable-openmp">
     <branch module="lalsuite" subdir="lalsimulation"/>
     <dependencies>
       <dep package="lal"/>
