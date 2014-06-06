@@ -163,6 +163,10 @@
     <branch module="astropy/montage-wrapper"/>
   </distutils>
 
+  <distutils id="skyarea">
+    <branch module="farr/skyarea"/>
+  </distutils>
+
   <distutils id="astroquery">
     <branch module="astropy/astroquery"/>
     <dependencies>
