@@ -159,6 +159,10 @@
     <branch module="leejjoon/pywcsgrid2"/>
   </distutils>
 
+  <distutils id="wcsaxes">
+    <branch module="astrofrog/wcsaxes"/>
+  </distutils>
+
   <distutils id="montage-wrapper">
     <branch module="astropy/montage-wrapper"/>
   </distutils>
