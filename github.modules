@@ -155,6 +155,10 @@
     <branch module="astropy/astropy"/>
   </distutils>
 
+  <distutils id="specutils">
+    <branch module="astropy/specutils"/>
+  </distutils>
+
   <distutils id="pywcsgrid2">
     <branch module="leejjoon/pywcsgrid2"/>
   </distutils>
