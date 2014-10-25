@@ -13,6 +13,11 @@ use_local_modulesets = True
 # module directory
 modulesets_dir = '~/modulesets'
 
+# don't install binaries into ${exec_prefix}/lib64
+# it's an SL6 convention, but it does not play very
+# nicely with LALSuite's configure script
+use_lib64 = False
+
 # what module set should be used.  The default can be found in
 # jhbuild/defaults.jhbuildrc, but can be any file in the modulesets directory
 # or a URL of a module set file on a web server.
