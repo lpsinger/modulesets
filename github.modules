@@ -159,6 +159,10 @@
     <branch module="astropy/specutils"/>
   </distutils>
 
+  <distutils id="pyearth">
+	<branch module="jcrudy/py-earth"/>
+  </distutils>
+
   <distutils id="pywcsgrid2">
     <branch module="leejjoon/pywcsgrid2"/>
   </distutils>
