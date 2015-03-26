@@ -128,14 +128,14 @@
   </distutils>
 
   <distutils id="lvalert" supports-non-srcdir-builds="no">
-    <branch module="lalsuite" subdir="lvalert"/>
+    <branch module="lvalert"/>
     <dependencies>
       <dep package="ligo"/>
     </dependencies>
   </distutils>
 
   <distutils id="gracedb" supports-non-srcdir-builds="no">
-    <branch module="lalsuite" subdir="gracedb"/>
+    <branch module="gracedb-client"/>
     <dependencies>
       <dep package="ligo"/>
       <dep package="glue"/>
