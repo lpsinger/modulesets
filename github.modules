@@ -171,6 +171,14 @@
     <branch module="astrofrog/wcsaxes"/>
   </distutils>
 
+  <distutils id="reproject">
+    <branch module="astrofrog/reproject"/>
+  </distutils>
+
+  <distutils id="git-fat">
+    <branch module="cyaninc/git-fat"/>
+  </distutils>
+
   <distutils id="montage-wrapper">
     <branch module="astropy/montage-wrapper"/>
   </distutils>
