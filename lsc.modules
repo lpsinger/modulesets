@@ -4,7 +4,7 @@
 <!-- vim:set ts=2 expandtab: -->
 <moduleset>
   <repository type="git" name="ligo-vcs.phys.uwm.edu"
-      href="ligo-vcs.phys.uwm.edu:/usr/local/git/" default="yes"/>
+      href="https://versions.ligo.org/git/" default="yes"/>
 
   <!-- FIXME: lalsuite autotools packages do not yet support non-srcdir builds
   under JHBuild; see https://bugs.ligo.org/redmine/issues/644
