@@ -3,7 +3,7 @@
 <?xml-stylesheet type="text/xsl" href="moduleset.xsl"?>
 <!-- vim:set ts=2 expandtab: -->
 <moduleset>
-  <repository type="git" name="ligo-vcs.phys.uwm.edu"
+  <repository type="git" name="versions.ligo.org"
       href="https://versions.ligo.org/git/" default="yes"/>
 
   <!-- FIXME: lalsuite autotools packages do not yet support non-srcdir builds
