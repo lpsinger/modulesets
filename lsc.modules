@@ -5,6 +5,8 @@
 <moduleset>
   <repository type="git" name="versions.ligo.org"
       href="https://versions.ligo.org/git/" default="yes"/>
+  <repository type="tarball" name="software.ligo.org"
+      href="http://software.ligo.org/lscsoft/source/"/>
 
   <!-- FIXME: lalsuite autotools packages do not yet support non-srcdir builds
   under JHBuild; see https://bugs.ligo.org/redmine/issues/644
@@ -107,6 +109,10 @@
     </dependencies>
   </autotools>
 
+  <autotools id="lalsuite-extra">
+    <branch repo="software.ligo.org" module="lalsuite-extra-1.1.0.tar.gz" version="1.1.0" hash="sha256:7a31f3fd215e7d95d6bd266051bb51385ad697e302eae587a8d443444218b3b9" />
+  </autotools>
+
   <distutils id="pylal" supports-non-srcdir-builds="no">
     <branch module="lalsuite" subdir="pylal"/>
     <dependencies>
@@ -155,6 +161,7 @@
       <dep package="lalsimulation"/>
       <dep package="lalinference"/>
       <dep package="lalapps"/>
+      <dep package="lalsuite-extra"/>
       <dep package="glue"/>
       <dep package="pylal"/>
       <dep package="ligo"/>
