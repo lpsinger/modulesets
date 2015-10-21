@@ -12,32 +12,32 @@
   under JHBuild; see https://bugs.ligo.org/redmine/issues/644
   and https://bugzilla.gnome.org/show_bug.cgi?id=689472 -->
 
-  <autotools id="lal" supports-non-srcdir-builds="no" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--enable-swig-python --enable-fast-gsl">
+  <autotools id="lal" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--enable-swig-python --enable-fast-gsl">
     <branch module="lalsuite" subdir="lal"/>
   </autotools>
 
-  <autotools id="lalframe" supports-non-srcdir-builds="no" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--enable-swig-python --enable-fast-gsl">
+  <autotools id="lalframe" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--enable-swig-python --enable-fast-gsl">
     <branch module="lalsuite" subdir="lalframe"/>
     <dependencies>
       <dep package="lal"/>
     </dependencies>
   </autotools>
 
-  <autotools id="lalmetaio" supports-non-srcdir-builds="no" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--enable-swig-python --enable-fast-gsl">
+  <autotools id="lalmetaio" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--enable-swig-python --enable-fast-gsl">
     <branch module="lalsuite" subdir="lalmetaio"/>
     <dependencies>
       <dep package="lal"/>
     </dependencies>
   </autotools>
 
-  <autotools id="lalxml" supports-non-srcdir-builds="no" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--enable-swig-python --enable-fast-gsl">
+  <autotools id="lalxml" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--enable-swig-python --enable-fast-gsl">
     <branch module="lalsuite" subdir="lalxml"/>
     <dependencies>
       <dep package="lal"/>
     </dependencies>
   </autotools>
 
-  <autotools id="lalinspiral" supports-non-srcdir-builds="no" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--enable-swig-python --enable-fast-gsl">
+  <autotools id="lalinspiral" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--enable-swig-python --enable-fast-gsl">
     <branch module="lalsuite" subdir="lalinspiral"/>
     <dependencies>
       <dep package="lal"/>
@@ -47,7 +47,7 @@
     </dependencies>
   </autotools>
 
-  <autotools id="lalburst" supports-non-srcdir-builds="no" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--enable-swig-python --enable-fast-gsl">
+  <autotools id="lalburst" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--enable-swig-python --enable-fast-gsl">
     <branch module="lalsuite" subdir="lalburst"/>
     <dependencies>
       <dep package="lal"/>
@@ -56,14 +56,14 @@
     </dependencies>
   </autotools>
 
-  <autotools id="lalsimulation" supports-non-srcdir-builds="no" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--enable-swig-python --enable-fast-gsl --enable-openmp">
+  <autotools id="lalsimulation" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--enable-swig-python --enable-fast-gsl --enable-openmp">
     <branch module="lalsuite" subdir="lalsimulation"/>
     <dependencies>
       <dep package="lal"/>
     </dependencies>
   </autotools>
 
-  <autotools id="lalpulsar" supports-non-srcdir-builds="no" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--enable-swig-python --enable-fast-gsl">
+  <autotools id="lalpulsar" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--enable-swig-python --enable-fast-gsl">
     <branch module="lalsuite" subdir="lalpulsar"/>
     <dependencies>
       <dep package="lal"/>
@@ -71,7 +71,7 @@
     </dependencies>
   </autotools>
 
-  <autotools id="lalstochastic" supports-non-srcdir-builds="no" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--enable-swig-python --enable-fast-gsl">
+  <autotools id="lalstochastic" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--enable-swig-python --enable-fast-gsl">
     <branch module="lalsuite" subdir="lalstochastic"/>
     <dependencies>
       <dep package="lal"/>
@@ -79,7 +79,7 @@
     </dependencies>
   </autotools>
 
-  <autotools id="lalinference" supports-non-srcdir-builds="no" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '"  autogenargs="--enable-swig-python --enable-fast-gsl --enable-openmp">
+  <autotools id="lalinference" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '"  autogenargs="--enable-swig-python --enable-fast-gsl --enable-openmp">
     <branch module="lalsuite" subdir="lalinference"/>
     <dependencies>
       <dep package="lal"/>
@@ -92,7 +92,7 @@
     </dependencies>
   </autotools>
 
-  <autotools id="lalapps" supports-non-srcdir-builds="no" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '">
+  <autotools id="lalapps" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '">
     <branch module="lalsuite" subdir="lalapps"/>
     <dependencies>
       <dep package="lal"/>
@@ -170,7 +170,7 @@
     </dependencies>
   </metamodule>
 
-  <autotools id="gstlal" supports-non-srcdir-builds="no" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00init.sh &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '">
+  <autotools id="gstlal" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00init.sh &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '">
     <branch module="gstlal" subdir="gstlal"/>
     <dependencies>
       <dep package="lal"/>
@@ -184,7 +184,7 @@
     </dependencies>
   </autotools>
 
-  <autotools id="gstlal-ugly" supports-non-srcdir-builds="no" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00init.sh &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '">
+  <autotools id="gstlal-ugly" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00init.sh &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '">
     <branch module="gstlal" subdir="gstlal-ugly"/>
     <dependencies>
       <dep package="lal"/>
@@ -199,7 +199,7 @@
     </dependencies>
   </autotools>
 
-  <autotools id="gstlal-inspiral" supports-non-srcdir-builds="no"  autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00init.sh &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '">
+  <autotools id="gstlal-inspiral"  autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00init.sh &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '">
     <branch module="gstlal" subdir="gstlal-inspiral"/>
     <dependencies>
       <dep package="lal"/>

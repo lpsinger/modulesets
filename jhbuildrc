@@ -1,9 +1,11 @@
 # -*- mode: python -*-
 # -*- coding: utf-8 -*-
 
+import os
 import sys
 import glob
 import getpass
+import inspect
 
 # edit this file to match your settings and copy or symlink it to ~/.config/jhbuildrc
 
@@ -40,6 +42,18 @@ if not os.path.isdir(buildroot):
 if not os.path.isdir(buildroot):
     buildroot = '/var/tmp/%s' % _user
 buildroot = os.path.join(buildroot, 'build')
+
+class _BuildDirPattern(object):
+    def __mod__(self, rhs):
+        parent_frame = inspect.currentframe().f_back
+        branch = parent_frame.f_locals['self'].branch
+        subdir = getattr(branch, 'subdir', None)
+        if subdir:
+            return os.path.join(rhs, subdir)
+        else:
+            return rhs
+builddir_pattern = _BuildDirPattern()
+del _BuildDirPattern
 
 #
 # directory for HTML build logs (run 'jhbuild tinderbox')
