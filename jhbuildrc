@@ -77,15 +77,7 @@ os.environ['GST_PLUGIN_PATH'] = os.path.expanduser('~/local/lib/gstreamer-0.10')
 
 # custom environment variables for Mac OS under MacPorts
 if sys.platform == 'darwin' and os.path.isdir('/opt/local/share/macports'):
-    # pkg-config files for Python-version-specific packages
-    addpath('PKG_CONFIG_PATH', '/opt/local/Library/Frameworks/Python.framework/Versions/Current/lib/pkgconfig')
-
-    # also search MacPorts /opt/local/include for C/C++ headers
-    addpath('C_INCLUDE_PATH', '/opt/local/include')
-    addpath('CPLUS_INCLUDE_PATH', '/opt/local/include')
-
-    # also add MacPorts to the dynamic linker path.
-    addpath('DYLD_FALLBACK_LIBRARY_PATH', '/opt/local/lib')
+    extra_prefixes.append('/opt/local')
 
     # use OpenMP-capable version of GCC when building bayestar
     module_extra_env['bayestar'] = {'CC': 'gcc-mp-4.5', 'CXX': 'g++-mp-4.5', 'CPP': 'cpp-mp-4.5'}
