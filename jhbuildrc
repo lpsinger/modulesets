@@ -45,6 +45,8 @@ if not os.path.isdir(buildroot):
     buildroot = '/var/tmp/%s' % _user
 buildroot = os.path.join(buildroot, 'jhbuild')
 
+# Hack to support non-srcdir builds for projects in subdirectories of git repos
+# See https://bugzilla.gnome.org/show_bug.cgi?id=689472
 class _BuildDirPattern(object):
     def __mod__(self, rhs):
         parent_frame = inspect.currentframe().f_back
