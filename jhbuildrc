@@ -40,8 +40,10 @@ if not os.path.isdir(buildroot):
 if not os.path.isdir(buildroot):
     buildroot = '/localscratch/%s' % _user
 if not os.path.isdir(buildroot):
+    buildroot = '/Users/%s/Library/Caches' % _user
+if not os.path.isdir(buildroot):
     buildroot = '/var/tmp/%s' % _user
-buildroot = os.path.join(buildroot, 'build')
+buildroot = os.path.join(buildroot, 'jhbuild')
 
 class _BuildDirPattern(object):
     def __mod__(self, rhs):
