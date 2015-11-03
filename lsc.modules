@@ -233,8 +233,4 @@
       <dep package="pylal"/>
     </dependencies>
   </distutils>
-
-  <distutils id="bayestar">
-    <branch module="bayestar"/>
-  </distutils>
 </moduleset>
