@@ -5,6 +5,8 @@
 <moduleset>
   <repository type="git" name="versions.ligo.org"
       href="https://versions.ligo.org/git/" default="yes"/>
+  <repository type="git" name="ligo-cbc"
+      href="https://github.com/ligo-cbc/"/>
   <repository type="tarball" name="software.ligo.org"
       href="http://software.ligo.org/lscsoft/source/"/>
 
@@ -221,6 +223,16 @@
   	  <dep package="gstlal-inspiral"/>
   	</dependencies>
   </metamodule>
+
+  <distutils id="pycbc">
+    <branch repo="ligo-cbc" module="pycbc"/>
+    <dependencies>
+      <dep package="lal"/>
+      <dep package="lalsimulation"/>
+      <dep package="glue"/>
+      <dep package="pylal"/>
+    </dependencies>
+  </distutils>
 
   <distutils id="bayestar">
     <branch module="bayestar"/>
