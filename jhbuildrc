@@ -69,9 +69,6 @@ os.environ['PS1'] = r'\[\033[0;34m\]JHBuild:\[\033[0;32m\]\h:\W \u $\[\033[0m\] 
 # the prefix to configure/install modules to (must have write access)
 prefix = '~/local'
 
-# set GStreamer plugin path
-os.environ['GST_PLUGIN_PATH'] = os.path.expanduser('~/local/lib/gstreamer-0.10')
-
 # custom CFLAGS / environment pieces for the build
 # os.environ['CFLAGS'] = '-Wall -g -O0'
 
