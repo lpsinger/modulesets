@@ -4,7 +4,7 @@
 <!-- vim:set ts=2 expandtab: -->
 <moduleset>
   <repository type="git" name="versions.ligo.org"
-      href="https://versions.ligo.org/git/" default="yes"/>
+      href="git://versions.ligo.org/" default="yes"/>
   <repository type="git" name="ligo-cbc"
       href="https://github.com/ligo-cbc/"/>
   <repository type="tarball" name="software.ligo.org"
