@@ -150,6 +150,14 @@
     </dependencies>
   </distutils>
 
+  <distutils id="grinch" supports-non-srcdir-builds="no">
+    <branch module="grinch"/>
+    <dependencies>
+      <dep package="gracedb"/>
+      <dep package="lvalert"/>
+    </dependencies>
+  </distutils>
+
   <metamodule id="lalsuite">
     <dependencies>
       <dep package="lal"/>
