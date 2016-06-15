@@ -90,6 +90,7 @@
       <dep package="lalxml"/>
       <dep package="lalsimulation"/>
       <dep package="lalinspiral"/>
+      <dep package="lalburst"/>
       <dep package="lalpulsar"/>
     </dependencies>
   </autotools>
