@@ -58,6 +58,14 @@ To start a shell with your newly built packages in the environment, run:
     $ jhbuild shell
 
 
+Experimental Support for Intel C Compiler (ICC)
+-----------------------------------------------
+
+There is now experimental support for compiling the LIGO/Virgo software stack (LALSuite) using the Intel C Compiler (`icc`), which is available on LIGO Data Grid computing clusters. To enable building with `icc`, add the line `icc = True` to your jhbuild configuration script as follows:
+
+    $ echo 'icc = True' >> ~/.config/my.jhbuildrc
+
+
 Details
 -------
 
