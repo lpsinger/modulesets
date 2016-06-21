@@ -23,4 +23,8 @@
   <distutils id="setuptools">
     <branch repo="bitbucket.org" module="lsinger/setuptools"/>
   </distutils>
+
+  <distutils id="yt">
+    <branch repo="bitbucket.org" module="yt_analysis/yt"/>
+  </distutils>
 </moduleset>

@@ -77,6 +77,14 @@
     </dependencies>
   </distutils>
 
+  <distutils id="flask-twilio">
+    <branch module="lpsinger/flask-twilio"/>
+  </distutils>
+
+  <distutils id="vispy">
+    <branch module="vispy/vispy"/>
+  </distutils>
+
   <distutils id="sqlalchemy">
     <branch module="zzzeek/sqlalchemy" tag="rel_0_8_1"/>
   </distutils>
@@ -147,6 +155,10 @@
     <branch module="aplpy/aplpy"/>
   </distutils>
 
+  <distutils id="setuptools_pkgconfig">
+    <branch module="lpsinger/setuptools_pkgconfig"/>
+  </distutils>
+
   <distutils id="astropysics">
     <branch module="eteq/astropysics"/>
   </distutils>
@@ -155,12 +167,24 @@
     <branch module="astropy/astropy"/>
   </distutils>
 
+  <distutils id="astroplan">
+    <branch module="astropy/astroplan"/>
+  </distutils>
+
   <distutils id="specutils">
     <branch module="astropy/specutils"/>
   </distutils>
 
   <distutils id="pyearth">
 	<branch module="jcrudy/py-earth"/>
+  </distutils>
+
+  <distutils id="pypng">
+	<branch module="drj11/pypng"/>
+  </distutils>
+
+  <distutils id="gbuts">
+	<branch module="lindyblackburn/gbuts"/>
   </distutils>
 
   <distutils id="pywcsgrid2">
@@ -177,6 +201,14 @@
 
   <distutils id="git-fat">
     <branch module="cyaninc/git-fat"/>
+  </distutils>
+
+  <distutils id="cyres">
+    <branch module="rll/cyres"/>
+  </distutils>
+
+  <distutils id="lvem">
+    <branch module="lpsinger/lvem"/>
   </distutils>
 
   <distutils id="montage-wrapper">
