@@ -6,8 +6,8 @@
     <title>JHBuild Modulesets for LIGO and Open Source Astronomy by lpsinger</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -28,7 +28,8 @@
         </ul>
       </header>
       <section>
-        <h1>JHBuild modulesets for LIGO and open-source astronomy software</h1>
+        <h1>
+<a id="jhbuild-modulesets-for-ligo-and-open-source-astronomy-software" class="anchor" href="#jhbuild-modulesets-for-ligo-and-open-source-astronomy-software" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>JHBuild modulesets for LIGO and open-source astronomy software</h1>
 
 <p><img src="https://raw.github.com/lpsinger/modulesets-website/master/xkcd.png" alt="parody of XKCD comic"></p>
 
@@ -56,7 +57,8 @@ you can add the <code>-q</code> flag:</p>
 <pre><code>$ jhbuild shell
 </code></pre>
 
-<h2>Instructions</h2>
+<h2>
+<a id="instructions" class="anchor" href="#instructions" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Instructions</h2>
 
 <p>To use, first clone this repository into your home directory under
 <code>~/modulesets</code> as follows:</p>
@@ -87,6 +89,15 @@ effect. Next, symlink the bundled JHBuild configuration file to
 <pre><code>$ mkdir -p ~/.config &amp;&amp; cd ~/.config &amp;&amp; ln -s ~/modulesets/jhbuildrc
 </code></pre>
 
+<p><strong><em>NEW!</em> Experimental Support for Intel C Compiler (ICC).</strong>
+There is now experimental support for compiling the LIGO/Virgo software stack
+(LALSuite) using the Intel C Compiler (<code>icc</code>), which is available on LIGO Data
+Grid computing clusters. <em>To enable building with <code>icc</code>, add the line
+<code>icc = True</code> to your jhbuild configuration script as follows:</em></p>
+
+<pre><code>$ echo 'icc = True' &gt;&gt; ~/.config/my.jhbuildrc
+</code></pre>
+
 <p>Finally, build <code>lalsuite</code> with:</p>
 
 <pre><code>$ jhbuild build lalsuite
@@ -97,7 +108,8 @@ effect. Next, symlink the bundled JHBuild configuration file to
 <pre><code>$ jhbuild shell
 </code></pre>
 
-<h2>Details</h2>
+<h2>
+<a id="details" class="anchor" href="#details" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Details</h2>
 
 <ul>
 <li><p>Source code for modules is checked out into <code>~/src</code>.</p></li>
