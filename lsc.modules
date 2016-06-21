@@ -95,7 +95,7 @@
     </dependencies>
   </autotools>
 
-  <autotools id="lalapps" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '">
+  <autotools id="lalapps" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--enable-openmp --enable-mpi">
     <branch module="lalsuite" subdir="lalapps"/>
     <dependencies>
       <dep package="lal"/>
