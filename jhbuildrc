@@ -102,3 +102,6 @@ if icc:
     os.environ['CFLAGS'] = '-ipo -O3 -xHost -Wno-error -static-intel -qopenmp-link=static'
     os.environ['CXXFLAGS'] = '-ipo -O3 -xHost -Wno-error -static-intel -qopenmp-link=static'
     os.environ['LDSHARED'] = 'icc -pthread -shared'
+
+# JHBuild doesn't want to see variables it doesn't recognize
+del icc
