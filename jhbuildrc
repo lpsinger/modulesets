@@ -98,6 +98,10 @@ for _other_config in glob.iglob(os.path.join(os.path.dirname(__file__), "*.jhbui
 if icc:
     os.environ['CC'] = 'icc'
     os.environ['CXX'] = 'icpc'
+    os.environ['FC'] = 'ifort'
+    os.environ['MPICC'] = 'mpiicc'
+    os.environ['MPICXX'] = 'mpiicpc'
+    os.environ['MPIFC'] = 'mpiifort'
     os.environ['AR'] = 'xiar'
     os.environ['CFLAGS'] = '-ipo -O3 -xHost -Wno-error -static-intel -qopenmp-link=static'
     os.environ['CXXFLAGS'] = '-ipo -O3 -xHost -Wno-error -static-intel -qopenmp-link=static'
