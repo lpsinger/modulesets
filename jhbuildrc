@@ -95,6 +95,13 @@ for _other_config in glob.iglob(os.path.join(os.path.dirname(__file__), "*.jhbui
     if not os.path.samefile(_other_config, __file__):
         execfile(_other_config)
 
+os.environ['CC'] = 'gcc'
+os.environ['CXX'] = 'g++'
+os.environ['FC'] = 'fc'
+os.environ['MPICC'] = 'mpicc'
+os.environ['MPICXX'] = 'mpicxx'
+os.environ['MPIFC'] = 'mpifc'
+
 if icc:
     os.environ['CC'] = 'icc'
     os.environ['CXX'] = 'icpc'
