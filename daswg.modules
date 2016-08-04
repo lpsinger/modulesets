@@ -7,7 +7,7 @@
       href="https://www.lsc-group.phys.uwm.edu/daswg/download/software/source/" default="yes"/>
 
   <autotools id="libframe" autogen-sh="configure">
-    <branch module="libframe-8.20.tar.gz" version="8.20"/>
+    <branch module="libframe-8.30.tar.gz" version="8.30"/>
   </autotools>
 
   <autotools id="libmetaio" autogen-sh="configure">
