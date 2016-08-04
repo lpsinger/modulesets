@@ -23,8 +23,8 @@
 
   <autotools id="chealpix" autogen-sh="configure">
     <branch repo="sf"
-      module="healpix/chealpix-3.11.4.tar.gz" version="3.11.4"
-      hash="sha1:214484d8959f37f890338c1624b0152f68c9a49d"/>
+      module="healpix/chealpix-3.30.0.tar.gz" version="3.30.0"
+      hash="sha1:ed8f3d62f3df3a1a620341920d14f38f4dbef6f6"/>
     <dependencies>
       <dep package="cfitsio"/>
     </dependencies>
@@ -32,8 +32,8 @@
 
   <autotools id="healpix_cxx" autogen-sh="configure">
     <branch repo="sf"
-      module="healpix/healpix_cxx-3.11.2.tar.gz" version="3.11.2"
-      hash="sha1:982620220ef578b5eb9a79357200ee0c1fd7b090"/>
+      module="healpix/healpix_cxx-3.30.0.tar.gz" version="3.30.0"
+      hash="sha1:2481fa561ac68d14ee82ba12b6b1874ad08967bc"/>
     <dependencies>
       <dep package="cfitsio"/>
     </dependencies>
@@ -41,7 +41,7 @@
 
   <distutils id="healpy">
     <branch repo="github"
-      module="healpy/healpy" tag="1.7.4" version="1.7.4"/>
+      module="healpy/healpy" tag="1.9.1" version="1.9.1"/>
     <dependencies>
       <dep package="cfitsio"/>
       <dep package="healpix_cxx"/>
