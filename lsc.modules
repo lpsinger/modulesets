@@ -6,7 +6,7 @@
   <repository type="git" name="versions.ligo.org"
       href="git://versions.ligo.org/" default="yes"/>
   <repository type="git" name="git.ligo.org"
-      href="https://git.ligo.org/" default="yes"/>
+      href="https://git.ligo.org/" default="no"/>
   <repository type="git" name="ligo-cbc"
       href="https://github.com/ligo-cbc/"/>
   <repository type="tarball" name="software.ligo.org"
