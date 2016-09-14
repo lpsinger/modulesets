@@ -5,10 +5,16 @@
 <moduleset>
   <repository type="git" name="versions.ligo.org"
       href="git://versions.ligo.org/" default="yes"/>
+  <repository type="git" name="git.ligo.org"
+      href="https://git.ligo.org/" default="yes"/>
   <repository type="git" name="ligo-cbc"
       href="https://github.com/ligo-cbc/"/>
   <repository type="tarball" name="software.ligo.org"
       href="http://software.ligo.org/lscsoft/source/"/>
+
+  <distutils id="ligo-proposal-writing-tool">
+    <branch repo="git.ligo.org" module="ligo-proposal-writing-tool"/>
+  </distutils>
 
   <!-- FIXME: lalsuite autotools packages do not yet support non-srcdir builds
   under JHBuild; see https://bugs.ligo.org/redmine/issues/644
