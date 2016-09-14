@@ -98,6 +98,8 @@
       <dep package="lalinspiral"/>
       <dep package="lalburst"/>
       <dep package="lalpulsar"/>
+      <dep package="skyarea"/>
+      <dep package="corner"/>
     </dependencies>
   </autotools>
 
