@@ -219,6 +219,10 @@
     <branch module="farr/skyarea"/>
   </distutils>
 
+  <distutils id="corner">
+    <branch module="dfm/corner.py"/>
+  </distutils>
+
   <distutils id="astroquery">
     <branch module="astropy/astroquery"/>
     <dependencies>
