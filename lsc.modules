@@ -103,6 +103,17 @@
     </dependencies>
   </autotools>
 
+  <autotools id="laldetchar" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '"  autogenargs="--enable-swig-python --enable-fast-gsl">
+    <branch module="lalsuite" subdir="laldetchar"/>
+    <dependencies>
+      <dep package="lal"/>
+      <dep package="lalframe"/>
+      <dep package="lalmetaio"/>
+      <dep package="lalsimulation"/>
+      <dep package="lalburst"/>
+    </dependencies>
+  </autotools>
+
   <autotools id="lalapps" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00boot &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--enable-fast-gsl --enable-openmp --enable-mpi --enable-cfitsio">
     <branch module="lalsuite" subdir="lalapps"/>
     <dependencies>
@@ -170,6 +181,7 @@
   <metamodule id="lalsuite">
     <dependencies>
       <dep package="lal"/>
+      <dep package="laldetchar"/>
       <dep package="lalframe"/>
       <dep package="lalmetaio"/>
       <dep package="lalxml"/>
