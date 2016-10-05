@@ -12,7 +12,7 @@
   <repository type="tarball" name="software.ligo.org"
       href="http://software.ligo.org/lscsoft/source/"/>
 
-  <distutils id="ligo-proposal-writing-tool">
+  <distutils id="ligo-proposal-tool">
     <branch repo="git.ligo.org" module="ligo-proposal-writing-tool"/>
   </distutils>
 
