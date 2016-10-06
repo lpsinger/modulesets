@@ -13,7 +13,7 @@
       href="http://software.ligo.org/lscsoft/source/"/>
 
   <distutils id="ligo-proposal-tool">
-    <branch repo="git.ligo.org" module="ligo-proposal-writing-tool"/>
+    <branch repo="git.ligo.org" module="ligo-proposal-tool"/>
   </distutils>
 
   <!-- FIXME: lalsuite autotools packages do not yet support non-srcdir builds
