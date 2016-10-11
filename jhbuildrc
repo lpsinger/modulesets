@@ -90,6 +90,12 @@ if sys.platform == 'darwin' and os.path.isdir('/opt/local/share/macports'):
 # Set to true here or in ~/.config/*.jhbuildrc to select Intel C Compiler (icc) as the default compiler toolchain
 icc = False
 
+# The gstlal modules need these extra pkg-config paths to locate pygobject.
+extra_pkg_config_path = '/opt/local/Library/Frameworks/Python.framework/Versions/Current/lib/pkgconfig'
+if os.path.exists(extra_pkg_config_path):
+    addpath('PKG_CONFIG_PATH', extra_pkg_config_path)
+del extra_pkg_config_path
+
 # Execute other *.jhbuildrc files in the same directory as this script.
 for _other_config in glob.iglob(os.path.join(os.path.dirname(__file__), "*.jhbuildrc")):
     if not os.path.samefile(_other_config, __file__):
