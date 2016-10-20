@@ -135,7 +135,7 @@
     <branch repo="software.ligo.org" module="lalsuite-extra-1.1.0.tar.gz" version="1.1.0" hash="sha256:7a31f3fd215e7d95d6bd266051bb51385ad697e302eae587a8d443444218b3b9" />
   </autotools>
 
-  <distutils id="pylal" supports-non-srcdir-builds="no">
+  <distutils id="pylal">
     <branch module="lalsuite" subdir="pylal"/>
     <dependencies>
       <dep package="lal"/>
@@ -147,22 +147,22 @@
     </dependencies>
   </distutils>
 
-  <distutils id="glue" supports-non-srcdir-builds="no">
+  <distutils id="glue">
     <branch module="lalsuite" subdir="glue"/>
   </distutils>
 
-  <distutils id="ligo" supports-non-srcdir-builds="no">
+  <distutils id="ligo">
     <branch module="lalsuite" subdir="ligo"/>
   </distutils>
 
-  <distutils id="lvalert" supports-non-srcdir-builds="no">
+  <distutils id="lvalert">
     <branch repo="git.ligo.org" module="lscsoft/lvalert"/>
     <dependencies>
       <dep package="ligo"/>
     </dependencies>
   </distutils>
 
-  <distutils id="gracedb" supports-non-srcdir-builds="no">
+  <distutils id="gracedb">
     <branch repo="git.ligo.org" module="lscsoft/gracedb-client"/>
     <dependencies>
       <dep package="ligo"/>
@@ -170,7 +170,7 @@
     </dependencies>
   </distutils>
 
-  <distutils id="grinch" supports-non-srcdir-builds="no">
+  <distutils id="grinch">
     <branch module="grinch"/>
     <dependencies>
       <dep package="gracedb"/>
