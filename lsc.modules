@@ -201,7 +201,7 @@
     </dependencies>
   </metamodule>
 
-  <autotools id="gstlal" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00init.sh &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '">
+  <autotools id="gstlal" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00init.sh &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--without-doxygen">
     <branch module="gstlal" subdir="gstlal"/>
     <dependencies>
       <dep package="lal"/>
@@ -215,7 +215,7 @@
     </dependencies>
   </autotools>
 
-  <autotools id="gstlal-ugly" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00init.sh &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '">
+  <autotools id="gstlal-ugly" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00init.sh &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--without-doxygen">
     <branch module="gstlal" subdir="gstlal-ugly"/>
     <dependencies>
       <dep package="lal"/>
@@ -230,7 +230,7 @@
     </dependencies>
   </autotools>
 
-  <autotools id="gstlal-inspiral"  autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00init.sh &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '">
+  <autotools id="gstlal-inspiral"  autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./00init.sh &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '" autogenargs="--without-doxygen">
     <branch module="gstlal" subdir="gstlal-inspiral"/>
     <dependencies>
       <dep package="lal"/>
