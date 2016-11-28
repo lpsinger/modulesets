@@ -156,14 +156,14 @@
   </distutils>
 
   <distutils id="lvalert">
-    <branch repo="git.ligo.org" module="lscsoft/lvalert"/>
+    <branch repo="git.ligo.org" module="lscsoft/lvalert.git"/>
     <dependencies>
       <dep package="ligo"/>
     </dependencies>
   </distutils>
 
   <distutils id="gracedb">
-    <branch repo="git.ligo.org" module="lscsoft/gracedb-client"/>
+    <branch repo="git.ligo.org" module="lscsoft/gracedb-client.git"/>
     <dependencies>
       <dep package="ligo"/>
       <dep package="glue"/>
