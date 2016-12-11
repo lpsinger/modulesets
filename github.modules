@@ -159,6 +159,10 @@
     <branch module="lpsinger/setuptools_pkgconfig"/>
   </distutils>
 
+  <distutils id="seaborn">
+    <branch module="mwaskom/seaborn"/>
+  </distutils>
+
   <distutils id="astropysics">
     <branch module="eteq/astropysics"/>
   </distutils>
