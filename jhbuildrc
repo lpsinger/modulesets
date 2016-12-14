@@ -12,9 +12,6 @@ import inspect
 # whether to use a local copy of modulesets (instead of fetching them from svn)
 use_local_modulesets = True
 
-# module directory
-modulesets_dir = '~/modulesets'
-
 # what module set should be used.  The default can be found in
 # jhbuild/defaults.jhbuildrc, but can be any file in the modulesets directory
 # or a URL of a module set file on a web server.
@@ -24,16 +21,26 @@ moduleset = [ 'daswg', 'lsc', 'github', 'sourceforge', 'gnu', 'gnome', 'bitbucke
 # A list of the modules to build.  Defaults to the GNOME core and tested apps.
 modules = [ 'lalsuite', 'gstlal-all', 'bpython' ]
 
-# what directory should the source be checked out to? ~/src
-checkoutroot = '~/src'
+# the prefix to configure/install modules to (must have write access)
+prefix = '~/local'
+
+# what directory should the source be checked out to? ~/local/src
+checkoutroot = os.path.join(prefix, 'src')
+
+# module directory (~/local/src/modulesets)
+modulesets_dir = os.path.join(checkoutroot, 'modulesets')
 
 # in what directory should out-of-srcdir builds be performed?
 # Try, in the following order:
-#   /usr1/$USER/jhbuild
-#   /local/$USER/jhbuild
-#   /localscratch/$USER/jhbuild
-#   /var/tmp/$USER/jhbuild
+#   /usr1/$USER
+#   /local/$USER
+#   /localscratch/$USER
+#   /var/tmp/$USER
 _user = getpass.getuser()
+userbuild = os.path.relpath(os.path.expanduser(prefix), os.path.expanduser('~'))
+if '.' in userbuild:
+    userbuild = os.path.abspath(os.path.expanduser(prefix))
+userbuild = userbuild.replace('/', '_')
 buildroot = '/usr1/%s' % _user
 if not os.path.isdir(buildroot):
     buildroot = '/local/user/%s' % _user
@@ -43,7 +50,8 @@ if not os.path.isdir(buildroot):
     buildroot = '/Users/%s/Library/Caches' % _user
 if not os.path.isdir(buildroot):
     buildroot = '/var/tmp/%s' % _user
-buildroot = os.path.join(buildroot, 'jhbuild')
+buildroot = os.path.join(buildroot, 'jhbuild', userbuild)
+del userbuild
 
 # Hack to support non-srcdir builds for projects in subdirectories of git repos
 # See https://bugzilla.gnome.org/show_bug.cgi?id=689472
@@ -65,9 +73,6 @@ tinderbox_outputdir = os.path.join(buildroot, 'html')
 
 # pretty prompt to tell user when they are in the JHBuild shell
 os.environ['PS1'] = r'\[\033[0;34m\]JHBuild:\[\033[0;32m\]\h:\W \u $\[\033[0m\] '
-
-# the prefix to configure/install modules to (must have write access)
-prefix = '~/local'
 
 # custom CFLAGS / environment pieces for the build
 # os.environ['CFLAGS'] = '-Wall -g -O0'
