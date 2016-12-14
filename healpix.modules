@@ -16,8 +16,8 @@
       makeargs="shared"
       supports-non-srcdir-builds="no">
     <branch repo="heasarc"
-      module="fitsio/c/cfitsio3360.tar.gz" version="3.360"
-      hash="sha1:946dce52528b0e4eb865db75c4e103cdd8cf51f8"
+      module="fitsio/c/cfitsio3390.tar.gz" version="3.390"
+      hash="sha256:62d3d8f38890275cc7a78f5e9a4b85d7053e75ae43e988f1e2390e539ba7f409"
       checkoutdir="cfitsio"/>
   </autotools>
 
