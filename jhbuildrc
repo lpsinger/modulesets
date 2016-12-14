@@ -29,10 +29,10 @@ checkoutroot = '~/src'
 
 # in what directory should out-of-srcdir builds be performed?
 # Try, in the following order:
-#   /usr1/$USER/build
-#   /local/$USER/build
-#   /localscratch/$USER/build
-#   /var/tmp/$USER/build
+#   /usr1/$USER/jhbuild
+#   /local/$USER/jhbuild
+#   /localscratch/$USER/jhbuild
+#   /var/tmp/$USER/jhbuild
 _user = getpass.getuser()
 buildroot = '/usr1/%s' % _user
 if not os.path.isdir(buildroot):
