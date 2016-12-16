@@ -132,7 +132,7 @@
   </autotools>
 
   <autotools id="lalsuite-extra">
-    <branch repo="software.ligo.org" module="lalsuite-extra-1.1.0.tar.gz" version="1.1.0" hash="sha256:7a31f3fd215e7d95d6bd266051bb51385ad697e302eae587a8d443444218b3b9" />
+    <branch repo="software.ligo.org" module="lalsuite-extra-1.3.0.tar.gz" version="1.3.0" hash="sha256:c3341af345169592af115134183222be3e22e209c4c292f9ccbb1b69cddf33a2" />
   </autotools>
 
   <distutils id="pylal">
