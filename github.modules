@@ -234,8 +234,19 @@
     </dependencies>
   </distutils>
 
+  <distutils id="kombine">
+    <branch module="bfarr/kombine"/>
+  </distutils>
+
   <distutils id="photutils">
     <branch module="astropy/photutils"/>
+    <dependencies>
+      <dep package="astropy"/>
+    </dependencies>
+  </distutils>
+
+  <distutils id="ccdproc">
+    <branch module="astropy/ccdproc"/>
     <dependencies>
       <dep package="astropy"/>
     </dependencies>

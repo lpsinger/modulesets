@@ -260,6 +260,7 @@
       <dep package="lalsimulation"/>
       <dep package="glue"/>
       <dep package="pylal"/>
+      <dep package="kombine"/>
     </dependencies>
   </distutils>
 </moduleset>
