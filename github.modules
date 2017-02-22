@@ -234,6 +234,10 @@
     </dependencies>
   </distutils>
 
+  <distutils id="ztf_sim">
+    <branch module="ZwickyTransientFacility/ztf_sim"/>
+  </distutils>
+
   <distutils id="kombine">
     <branch module="bfarr/kombine"/>
   </distutils>
