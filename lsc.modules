@@ -147,8 +147,18 @@
     </dependencies>
   </distutils>
 
+  <distutils id="ligo-glue">
+    <branch module="lalsuite" subdir="ligo-glue"/>
+    <dependencies>
+      <dep package="ligo"/>
+    </dependencies>
+  </distutils>
+
   <distutils id="glue">
     <branch module="lalsuite" subdir="glue"/>
+    <dependencies>
+      <dep package="ligo-glue"/>
+    </dependencies>
   </distutils>
 
   <distutils id="ligo">
