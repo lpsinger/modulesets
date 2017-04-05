@@ -253,12 +253,16 @@
   	</dependencies>
   </metamodule>
 
+  <distutils id="pycbc-glue">
+    <branch repo="ligo-cbc" module="pycbc-glue"/>
+  </distutils>
+
   <distutils id="pycbc">
     <branch repo="ligo-cbc" module="pycbc"/>
     <dependencies>
       <dep package="lal"/>
       <dep package="lalsimulation"/>
-      <dep package="glue"/>
+      <dep package="pycbc-glue"/>
       <dep package="pylal"/>
       <dep package="kombine"/>
     </dependencies>
