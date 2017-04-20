@@ -73,13 +73,13 @@ MacPorts
 --------
 
 For building LALSuite on [MacPorts](https://www.macports.org), I suggest using
-the GCC 5 compiler toolchain (instead of clang) for full OpenMP support. On Mac
+the GCC 6 compiler toolchain (instead of clang) for full OpenMP support. On Mac
 OS, make sure that your MacPorts ports are up to date, and then run the
 following commands:
 
-    $ sudo port install openmpi-gcc5
-    $ sudo port select --set gcc mp-gcc5
-    $ sudo port select --set mpi openmpi-gcc5-fortran
+    $ sudo port install openmpi-gcc6
+    $ sudo port select --set gcc mp-gcc6
+    $ sudo port select --set mpi openmpi-gcc6-fortran
 
 
 Details
