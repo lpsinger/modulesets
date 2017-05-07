@@ -9,7 +9,7 @@
       href="git://git.savannah.gnu.org/"/>
 
   <autotools id="gsl" autogen-sh="autoreconf">
-    <branch repo="gnu.org" module="gsl/gsl-2.2.1.tar.gz" version="2.2.1"
+    <branch module="gsl/gsl-2.2.1.tar.gz" version="2.2.1"
       hash="sha256:13d23dc7b0824e1405f3f7e7d0776deee9b8f62c62860bf66e7852d402b8b024"/>
   </autotools>
 </moduleset>
