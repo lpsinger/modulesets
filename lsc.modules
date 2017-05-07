@@ -267,4 +267,14 @@
       <dep package="kombine"/>
     </dependencies>
   </distutils>
+
+  <autotools id="libframe">
+    <branch repo="software.ligo.org" module="libframe-8.30.tar.gz" version="8.30"
+      hash="sha256:374743ccce835427a0900590a515c112661760e12ec596159d3f86073dd099da"/>
+  </autotools>
+
+  <autotools id="metaio">
+    <branch repo="software.ligo.org" module="metaio-8.4.0.tar.gz" version="8.4.0"
+      hash="sha256:8990d5aa23614328880d15af72071009a578cedf75174e437b3d63643b850b76"/>
+  </autotools>
 </moduleset>
