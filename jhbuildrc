@@ -18,7 +18,7 @@ local_modulesets_dir = '~/modulesets'
 moduleset = [ 'daswg', 'lsc', 'github', 'sourceforge', 'gnu', 'gnome', 'bitbucket', 'nds2', 'healpix', 'fftw' ]
 
 moduleset = [os.path.expanduser(os.path.join(local_modulesets_dir, m + '.modules')) for m in moduleset]
-moduleset += ['bootstrap']
+# moduleset += ['bootstrap']
 del m, local_modulesets_dir
 
 #
