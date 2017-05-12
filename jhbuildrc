@@ -9,26 +9,30 @@ import inspect
 
 # edit this file to match your settings and copy or symlink it to ~/.config/jhbuildrc
 
-# whether to use a local copy of modulesets (instead of fetching them from svn)
-use_local_modulesets = True
-
-# what module set should be used.  The default can be found in
-# jhbuild/defaults.jhbuildrc, but can be any file in the modulesets directory
-# or a URL of a module set file on a web server.
-moduleset = [ 'daswg', 'lsc', 'github', 'sourceforge', 'gnu', 'gnome', 'bitbucket', 'nds2', 'healpix' ]
-
-#
-# A list of the modules to build.  Defaults to the GNOME core and tested apps.
-modules = [ 'lalsuite', 'gstlal-all', 'bpython' ]
-
 # the prefix to configure/install modules to (must have write access)
 prefix = '~/local'
 
 # what directory should the source be checked out to? ~/local/src
 checkoutroot = os.path.join(prefix, 'src')
 
-# module directory (~/local/src/modulesets)
-modulesets_dir = os.path.join(checkoutroot, 'modulesets')
+# whether to use a local copy of modulesets (instead of fetching them from svn)
+use_local_modulesets = True
+
+# module directory
+local_modulesets_dir = os.path.join(checkoutroot, 'modulesets')
+
+# what module set should be used.  The default can be found in
+# jhbuild/defaults.jhbuildrc, but can be any file in the modulesets directory
+# or a URL of a module set file on a web server.
+moduleset = [ 'daswg', 'lsc', 'github', 'sourceforge', 'gnu', 'gnome', 'bitbucket', 'nds2', 'healpix', 'fftw' ]
+
+moduleset = [os.path.expanduser(os.path.join(local_modulesets_dir, m + '.modules')) for m in moduleset]
+# moduleset += ['bootstrap']
+del m, local_modulesets_dir
+
+#
+# A list of the modules to build.  Defaults to the GNOME core and tested apps.
+modules = [ 'lalsuite', 'gstlal-all', 'bpython' ]
 
 # in what directory should out-of-srcdir builds be performed?
 # Try, in the following order:
@@ -52,6 +56,9 @@ if not os.path.isdir(buildroot):
     buildroot = '/var/tmp/%s' % _user
 buildroot = os.path.join(buildroot, 'jhbuild', userbuild)
 del userbuild
+
+# Put tarballs in build dir to save space in home directory
+tarballdir = os.path.join(buildroot, 'downloads')
 
 # Hack to support non-srcdir builds for projects in subdirectories of git repos
 # See https://bugzilla.gnome.org/show_bug.cgi?id=689472

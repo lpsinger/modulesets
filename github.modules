@@ -19,6 +19,14 @@
     <branch module="cython/cython" tag="0.20.1"/>
   </distutils>
 
+  <distutils id="pytest-arraydiff">
+    <branch module="astrofrog/pytest-arraydiff"/>
+  </distutils>
+
+  <distutils id="pytest-mpl">
+    <branch module="matplotlib/pytest-mpl"/>
+  </distutils>
+
   <distutils id="lxml">
     <branch module="lxml/lxml" tag="lxml-3.3.1"/>
   </distutils>

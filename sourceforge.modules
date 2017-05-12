@@ -6,8 +6,8 @@
   <repository type="tarball" name="sourceforge.net"
       href="http://downloads.sourceforge.net/sourceforge/" default="yes"/>
 
-  <autotools id="swig" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./autogen.sh &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s --libdir %(libdir)s %(autogenargs)s '">
-    <branch module="swig/swig-2.0.11.tar.gz" version="2.0.11"
-      hash="sha1:d3bf4e78824dba76bfb3269367f1ae0276b49df9"/>
+  <autotools id="swig" supports-non-srcdir-builds="no" autogen-template="bash -c 'pushd %(srcdir)s &amp;&amp; ./autogen.sh &amp;&amp; popd &amp;&amp; %(srcdir)s/configure --prefix %(prefix)s %(autogenargs)s '">
+    <branch module="swig/swig-3.0.12.tar.gz" version="3.0.12"
+      hash="sha256:7cf9f447ae7ed1c51722efc45e7f14418d15d7a1e143ac9f09a668999f4fc94d"/>
   </autotools>
 </moduleset>

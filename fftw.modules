@@ -1,0 +1,31 @@
+<?xml version="1.0"?><!--*- mode: nxml; indent-tabs-mode: nil -*-->
+<!DOCTYPE moduleset SYSTEM "moduleset.dtd">
+<?xml-stylesheet type="text/xsl" href="moduleset.xsl"?>
+<!-- vim:set ts=2 expandtab: -->
+<moduleset>
+  <repository type="tarball" name="fftw.org"
+      href="http://www.fftw.org/" default="yes"/>
+
+  <metamodule id="fftw">
+    <dependencies>
+      <dep package="fftw-single"/>
+      <dep package="fftw-double"/>
+      <dep package="fftw-long-double"/>
+    </dependencies>
+  </metamodule>
+
+  <autotools id="fftw-double">
+    <branch module="fftw-3.3.5.tar.gz" version="3.3.5"
+      hash="sha256:8ecfe1b04732ec3f5b7d279fdb8efcad536d555f9d1e8fabd027037d45ea8bcf"/>
+  </autotools>
+
+  <autotools id="fftw-single" autogenargs="--enable-float">
+    <branch module="fftw-3.3.5.tar.gz" version="3.3.5"
+      hash="sha256:8ecfe1b04732ec3f5b7d279fdb8efcad536d555f9d1e8fabd027037d45ea8bcf"/>
+  </autotools>
+
+  <autotools id="fftw-long-double" autogenargs="--enable-long-double">
+    <branch module="fftw-3.3.5.tar.gz" version="3.3.5"
+      hash="sha256:8ecfe1b04732ec3f5b7d279fdb8efcad536d555f9d1e8fabd027037d45ea8bcf"/>
+  </autotools>
+</moduleset>
