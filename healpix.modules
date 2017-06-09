@@ -41,7 +41,7 @@
 
   <distutils id="healpy">
     <branch repo="github"
-      module="healpy/healpy" tag="1.9.1" version="1.9.1"/>
+      module="healpy/healpy" tag="1.10.3" version="1.10.3"/>
     <dependencies>
       <dep package="cfitsio"/>
       <dep package="healpix_cxx"/>
