@@ -14,17 +14,17 @@
     </dependencies>
   </metamodule>
 
-  <autotools id="fftw-double">
+  <autotools id="fftw-double" autogenargs="--enable-shared --disable-static">
     <branch module="fftw-3.3.5.tar.gz" version="3.3.5"
       hash="sha256:8ecfe1b04732ec3f5b7d279fdb8efcad536d555f9d1e8fabd027037d45ea8bcf"/>
   </autotools>
 
-  <autotools id="fftw-single" autogenargs="--enable-float">
+  <autotools id="fftw-single" autogenargs="--enable-float --enable-shared --disable-static">
     <branch module="fftw-3.3.5.tar.gz" version="3.3.5"
       hash="sha256:8ecfe1b04732ec3f5b7d279fdb8efcad536d555f9d1e8fabd027037d45ea8bcf"/>
   </autotools>
 
-  <autotools id="fftw-long-double" autogenargs="--enable-long-double">
+  <autotools id="fftw-long-double" autogenargs="--enable-long-double --enable-shared --disable-static">
     <branch module="fftw-3.3.5.tar.gz" version="3.3.5"
       hash="sha256:8ecfe1b04732ec3f5b7d279fdb8efcad536d555f9d1e8fabd027037d45ea8bcf"/>
   </autotools>
