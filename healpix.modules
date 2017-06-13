@@ -13,12 +13,13 @@
     href="https://github.com/"/>
 
   <autotools id="cfitsio" autogen-sh="configure"
-      makeargs="shared"
       supports-non-srcdir-builds="no">
     <branch repo="heasarc"
       module="fitsio/c/cfitsio3390.tar.gz" version="3.390"
       hash="sha256:62d3d8f38890275cc7a78f5e9a4b85d7053e75ae43e988f1e2390e539ba7f409"
-      checkoutdir="cfitsio"/>
+      checkoutdir="cfitsio">
+      <patch file="cfitsio-shared.patch"/>
+    </branch>
   </autotools>
 
   <autotools id="chealpix" autogen-sh="configure">
@@ -41,7 +42,7 @@
 
   <distutils id="healpy">
     <branch repo="github"
-      module="healpy/healpy" tag="1.9.1" version="1.9.1"/>
+      module="healpy/healpy" tag="1.10.3" version="1.10.3"/>
     <dependencies>
       <dep package="cfitsio"/>
       <dep package="healpix_cxx"/>

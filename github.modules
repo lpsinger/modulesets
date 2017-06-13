@@ -7,7 +7,15 @@
   <repository type="tarball" name="github.com/downloads"
       href="https://github.com/downloads/"/>
 
-  <distutils id="pillow">
+  <distutils id="networkx">
+    <branch module="networkx/networkx"/>
+  </distutils>
+
+  <distutils id="mpi4py">
+    <branch module="mpi4py/mpi4py"/>
+  </distutils>
+
+ <distutils id="pillow">
     <branch module="python-imaging/Pillow" tag="2.3.0"/>
   </distutils>
 

@@ -1,0 +1,25 @@
+--- Makefile.in.orig	2017-06-09 13:47:02.000000000 -0400
++++ Makefile.in	2017-06-09 13:51:15.000000000 -0400
+@@ -88,11 +88,11 @@
+ 		@if [ "x${FC}" = x ]; then \
+ 			${MAKE} all-nofitsio; \
+ 		else \
+-			${MAKE} stand_alone; \
++			${MAKE} shared; \
+ 		fi
+ 
+ all-nofitsio:
+-		${MAKE} stand_alone "FITSIO_SRC="
++		${MAKE} shared "FITSIO_SRC="
+ 
+ stand_alone:	lib${PACKAGE}.a
+ 
+@@ -109,7 +109,7 @@
+ 			ln -sf ${CFITSIO_SHLIB_SONAME} $@; \
+ 		fi
+ 
+-install:	lib${PACKAGE}.a ${INSTALL_DIRS}
++install:	lib${PACKAGE}${SHLIB_SUFFIX} ${INSTALL_DIRS}
+ 		/bin/cp -a lib${PACKAGE}* ${CFITSIO_LIB}
+ 		/bin/cp fitsio.h fitsio2.h longnam.h drvrsmem.h ${CFITSIO_INCLUDE}
+ 		/bin/cp cfitsio.pc ${CFITSIO_LIB}/pkgconfig
