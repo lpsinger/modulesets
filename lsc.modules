@@ -149,6 +149,10 @@
     <branch module="duncanmmacleod/glue"/>
   </distutils>
 
+  <distutils id="gwcelery">
+    <branch module="emfollow/gwcelery"/>
+  </distutils>
+
   <distutils id="ligo">
     <branch module="lscsoft/lalsuite" subdir="ligo"/>
   </distutils>
