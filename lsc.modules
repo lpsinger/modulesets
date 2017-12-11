@@ -153,21 +153,13 @@
     <branch module="emfollow/gwcelery"/>
   </distutils>
 
-  <distutils id="ligo">
-    <branch module="lscsoft/lalsuite" subdir="ligo"/>
-  </distutils>
-
   <distutils id="lvalert">
     <branch repo="git.ligo.org" module="lscsoft/lvalert.git"/>
-    <dependencies>
-      <dep package="ligo"/>
-    </dependencies>
   </distutils>
 
   <distutils id="gracedb">
     <branch repo="git.ligo.org" module="lscsoft/gracedb-client.git"/>
     <dependencies>
-      <dep package="ligo"/>
       <dep package="glue"/>
     </dependencies>
   </distutils>
@@ -197,7 +189,6 @@
       <dep package="lalsuite-extra"/>
       <dep package="glue"/>
       <dep package="pylal"/>
-      <dep package="ligo"/>
       <dep package="gracedb"/>
       <dep package="lvalert"/>
     </dependencies>
