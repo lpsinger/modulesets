@@ -11,6 +11,10 @@
     <branch module="networkx/networkx"/>
   </distutils>
 
+  <distutils id="celery">
+    <branch module="celery/celery"/>
+  </distutils>
+
   <distutils id="mpi4py">
     <branch module="mpi4py/mpi4py"/>
   </distutils>
