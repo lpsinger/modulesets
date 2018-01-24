@@ -15,6 +15,17 @@
     <branch module="celery/celery"/>
   </distutils>
 
+  <distutils id="celery-eternal">
+    <branch module="lpsinger/celery-eternal"/>
+    <dependencies>
+      <dep package="celery-singleton"/>
+    </dependencies>
+  </distutils>
+
+  <distutils id="celery-singleton">
+    <branch module="steinitzu/celery-singleton"/>
+  </distutils>
+
   <distutils id="mpi4py">
     <branch module="mpi4py/mpi4py"/>
   </distutils>
