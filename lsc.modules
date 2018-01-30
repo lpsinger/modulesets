@@ -134,7 +134,7 @@
   </autotools>
 
   <distutils id="glue">
-    <branch module="duncanmmacleod/glue"/>
+    <branch module="lscsoft/glue"/>
   </distutils>
 
   <distutils id="gwcelery">
