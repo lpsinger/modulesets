@@ -137,6 +137,10 @@
     <branch module="lscsoft/glue"/>
   </distutils>
 
+  <distutils id="ligo.skymap">
+    <branch module="leo-singer/ligo.skymap"/>
+  </distutils>
+
   <distutils id="gwcelery">
     <branch module="emfollow/gwcelery"/>
   </distutils>
