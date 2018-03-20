@@ -7,12 +7,28 @@
   <repository type="tarball" name="github.com/downloads"
       href="https://github.com/downloads/"/>
 
+  <distutils id="sphinx">
+    <branch module="sphinx-doc/sphinx"/>
+  </distutils>
+
   <distutils id="networkx">
     <branch module="networkx/networkx"/>
   </distutils>
 
+  <distutils id="ztf-too-marshal">
+    <branch module="ZwickyTransientFacility/ztf-too-marshal"/>
+  </distutils>
+
+  <distutils id="delocate">
+    <branch module="matthew-brett/delocate"/>
+  </distutils>
+
   <distutils id="celery">
     <branch module="celery/celery"/>
+  </distutils>
+
+  <distutils id="3d_volume">
+    <branch module="wdpozzo/3d_volume"/>
   </distutils>
 
   <distutils id="celery-eternal">
@@ -22,8 +38,16 @@
     </dependencies>
   </distutils>
 
+  <distutils id="h5py">
+    <branch module="h5py/h5py.git"/>
+  </distutils>
+
   <distutils id="celery-singleton">
     <branch module="steinitzu/celery-singleton"/>
+  </distutils>
+
+  <distutils id="astropy-healpix">
+    <branch module="astropy/astropy-healpix"/>
   </distutils>
 
   <distutils id="mpi4py">
