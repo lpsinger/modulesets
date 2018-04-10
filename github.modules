@@ -7,6 +7,10 @@
   <repository type="tarball" name="github.com/downloads"
       href="https://github.com/downloads/"/>
 
+  <distutils id="gwemopt">
+    <branch module="mcoughlin/gwemopt"/>
+  </distutils>
+
   <distutils id="sphinx">
     <branch module="sphinx-doc/sphinx"/>
   </distutils>
