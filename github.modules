@@ -191,6 +191,10 @@
     <branch module="dfm/emcee"/>
   </distutils>
 
+  <distutils id="ptemcee">
+    <branch module="willvousden/ptemcee"/>
+  </distutils>
+
   <distutils id="acor">
     <branch module="dfm/acor"/>
   </distutils>
