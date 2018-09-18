@@ -96,6 +96,7 @@
       <dep package="lalinspiral"/>
       <dep package="lalburst"/>
       <dep package="lalpulsar"/>
+      <dep package="ligo-segments"/>
       <dep package="skyarea"/>
       <dep package="corner"/>
     </dependencies>
@@ -135,6 +136,10 @@
 
   <distutils id="glue">
     <branch module="lscsoft/glue"/>
+  </distutils>
+
+  <distutils id="ligo-segments">
+    <branch module="ligo-segments"/>
   </distutils>
 
   <distutils id="ligo.skymap">
